@@ -6,7 +6,7 @@
   <meta name="description" content="We scale diffusion models for language conditioned planning.">
   <meta name="keywords" content="planning,diffusion,language,RL,robotics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Language Control Diffusion: Efficiently Scaling through Space, Time, and Tasks</title>
+  <title>Social Environment Design</title>
 
 
 
@@ -40,20 +40,31 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Language Control Diffusion: Efficiently Scaling through Space,
-              Time, and Tasks</h1>
+            <h1 class="title is-1 publication-title">Social Environment Design</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://eddie.win">Eddie Zhang</a><sup>1,2</sup>,</span>
               <span class="author-block">
-                <a href="https://yujielu10.github.io/">Yujie Lu</a><sup>3</sup>,</span>
+                <a href="https://sites.google.com/view/sadiezhao/about?authuser=0">Sadie Zhao</a><sup>1</sup>,</span> 
               <span class="author-block">
-                <a href="https://www.linkedin.com/in/shinda-huang/">Shinda Huang</a><sup>3</sup>,</span>
+                <a href="https://tonghanwang.github.io/">Tonghan Wang</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="https://sites.cs.ucsb.edu/~william/">William Wang</a><sup>3</sup>,
+                <a href="https://safwanhossain.github.io/">Safwan Hossain</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://amyzhang.github.io/">Amy Zhang</a><sup>4</sup>
+                <a href="https://www.linkedin.com/in/henrygasztowtt/?originalSubdomain=uk">Henry Gasztowtt</a><sup>3</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://www.stephanzheng.com/">Stephan Zheng</a><sup>4</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://parkes.seas.harvard.edu/">David C. Parkes</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://teamcore.seas.harvard.edu/tambe">Milind Tambe</a><sup>1,5</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://yiling.seas.harvard.edu/">Yiling Chen</a><sup>1</sup>
               </span>
 
             </div>
@@ -61,18 +72,20 @@
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>Harvard University</span>
               <span class="author-block"><sup>2</sup>Founding</span>
-              <span class="author-block"><sup>3</sup>UC Santa Barbara</span>
-              <span class="author-block"><sup>4</sup>UT Austin</span>
+              <span class="author-block"><sup>3</sup>Oxford University</span>
+              <span class="author-block"><sup>4</sup>Asari AI</span>
+              <span class="author-block"><sup>5</sup>Google Research</span>
+
             </div>
 
             <div class="is-size-5 publication-authors">
-              ICLR 2024
+              Machine Learning, ICML
             </div>
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a target="_blank" href="https://arxiv.org/pdf/2210.15629"
+                  <a target="_blank" href="https://arxiv.org/pdf/2402.14090v1"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -81,7 +94,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a target="_blank" href="https://arxiv.org/abs/2210.15629"
+                  <a target="_blank" href="https://arxiv.org/abs/2402.14090"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -89,19 +102,9 @@
                     <span>arXiv</span>
                   </a>
                 </span>
-                <!-- Video Link. -->
-                <!-- <span class="link-block">
-                  <a target="_blank" href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span> -->
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a target="_blank" href="https://github.com/ezhang7423/language-control-diffusion"
+                  <a target="_blank" href="https://github.com/ezhang7423/social-environment-design"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -109,15 +112,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-                <!-- Dataset Link. -->
-                <span class="link-block">
-                  <a target="_blank" href="https://github.com/ezhang7423/hulc-data"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="far fa-images"></i>
-                    </span>
-                    <span>Data</span>
-                  </a>
               </div>
 
             </div>
@@ -130,66 +124,19 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/LCD.mp4" type="video/mp4">
-        </video>
         <h2 class="subtitle has-text-centered">
-          <span class="dnerf">lcd</span> scales diffusion models for long horizon and language conditioned planning.
+          <span class="dnerf">SED</span> proposes a novel framework for automated policy-making through AI.
         </h2>
       </div>
     </div>
   </section>
 
-
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
-        <!-- <div id="results-carousel" class="carousel results-carousel"
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/steve.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/chair-tp.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/shiba.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/fullbody.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-blueshirt">
-            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/blueshirt.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-mask">
-            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/mask.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-coffee">
-            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/coffee.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-toby">
-            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/toby2.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>
-
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -199,226 +146,137 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Training generalist agents is difficult across several axes, requiring us to deal with high dimensional
-              inputs (space), long horizons (time), and multiple and new tasks. Recent advances with architectures have
-              allowed for improved scaling along one or two of these dimensions, but are still prohibitive
-              computationally. In this paper, we propose to address all three axes by leveraging Language to Control
-              Diffusion models as a hierarchical planner conditioned on language <span class="dnerf">lcd</span>.
-            </p>
-            <p>
-              We effectively and efficiently scale diffusion models for planning in extended temporal, state, and task
-              dimensions to tackle long
-              horizon control problems conditioned on natural language instructions. We compare LCD with other
-              state-of-the-art models on the CALVIN language robotics benchmark and find that LCD outperforms other
-              SOTA methods in multi task success rates while dramatically improving computational efficiency with a
-              single task success rate (SR) of <strong>88.7%</strong> against the previous best of
-              <strong>82.7%</strong>.
-            </p>
-            <p>
-              We show that LCD can successfully
-              leverage the unique strength of diffusion models to produce coherent long range plans while addressing
-              their weakness at generating low-level details and contro
+              Artificial Intelligence (AI) holds promise as a technology that can be used to improve government
+              and economic policy-making. This paper proposes a new research agenda towards this end by
+              introducing <strong>Social Environment Design</strong>, a general framework for the use of AI for automated
+              policy-making that connects with the Reinforcement Learning, EconCS, and Computational Social Choice communities. 
+              The framework seeks to capture general economic environments, includes voting on policy objectives, and gives a 
+              direction for the systematic analysis of government and economic policy through AI simulation. We highlight
+              key open problems for future research in AI-based policymaking. By solving these challenges, we hope to achieve 
+              various social welfare objectives, thereby promoting more ethical and responsible decision making.
+              <span class="dnerf">sed</span>.
             </p>
           </div>
         </div>
       </div>
       <!--/ Abstract. -->
 
-      <!-- Paper video. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <video id="lift" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/lift_red_block_slider_diffusion.mp4" type="video/mp4">
-          </video>
-          <video id="move" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/move_slider_right_diffusion.mp4" type="video/mp4">
-          </video>
-          <video id="place" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/place_in_slider_diffusion.mp4" type="video/mp4">
-          </video>
-          <video id="rotate" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/rotate_blue_block_right_diffusion.mp4" type="video/mp4">
-          </video>
-          <video id="turn" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/turn_off_lightbulb_diffusion.mp4" type="video/mp4">
-          </video>
-
-        </div>
-      </div>
-      <!--/ Paper video. -->
-      <div style="height: 100px;"></div>
+      <!-- Introduction. -->
+      <div>
+      <div style="height: 50px;"></div>
       <div class="container is-max-desktop content">
-        <h2 class="title is-3">Efficient Training & Inference</h2>
+        <h2 class="title is-3">Introduction</h2>
+        <div>  Economic policy formulation is a domain fraught with complexity, with traditional economic models providing limited 
+          foresight into the outcomes of policy decisions. Policy-makers must not only understand the immediate implications 
+          of individual policies but also their aggregate and long-term effects. In addition, human policy-maker incentives 
+          are often not aligned with the interests of the general public, and may instead prioritize special interests or 
+          reelection. In light of this, AI-based approaches to policy design that can simulate economies and target different 
+          objectives, hold the potential for improved policy understanding and formulation.</div>
+        <br />
+      </div>
+
+      <div style="height: 15px;"></div>
+      <div class="container is-max-desktop content">
         <div class="columns is-centered has-text-centered">
           <div class="column is-full-width">
-            <img style="width: 800px" src="./static/images/chart.svg" alt="chart">
+            <img style="width: 800px" src="./static/images/framework.png" alt="framework">
           </div>
+        </div>
+        <div>Figure 1: The proposed framework. The process begins with voting, where human or AI players report preferences on social welfare objectives to a 
+          voting mechanism (1). This defines an objective for the Principal, who designs a parameterized 𝑁-player Partially Observable Markov Game. 
+          The players are the same as the voters. This POMG unfolds over several timesteps 𝑇. Following the POMG, game state information is extracted
+           to initiate a new round of voting, with the last POMG state used as the first game state of the new round. This whole process is repeated for 
+          𝜏 timesteps.</div>
+        <br />
+      </div>
+
+      <div style="height: 15px;"></div>
+      <div class="container is-max-desktop content">
+        <div class="columns is-centered has-text-centered">
+        </div>
+        <div>
+          In an era where AI is gaining increasing attention in governments, it is timely to understand its potential influence on future policy-making. Ideally, such a framework should satisfy the following desiderata:
+        </div>
+        <ol>
+          <li><strong>Alignment of policy-makers</strong> to the values of constituents, whilst ensuring fair and equitable representation.</li>
+          <li>Sufficient<strong> model expressivity</strong> to accurately represent the intricate governance structures found in the real world, capturing the subtleties and variances of socio-economic interactions.</li>
+          <li>Balance expressiveness with <strong> with computational tractability</strong>, making it feasible to scale to systems with a large number of agents.</li>
+          <li>Build<strong> theoretical understanding,</strong> enabling systematic analysis and offering a new lens on complex economic models.</li>
+        </ol>
+        <div>
+          Our work proposes a new framework, Social Environment Design, that lays out an agenda in making progress towards these desiderata. 
+          In our framework, illustrated in the figure above, we suggest addressing the concern of a misaligned policy-maker an AI-driven Principal policy-maker 
+          who seeks to achieve suggested policy goals, given by a voting mechanism. We capture the complexity of a general economic environment
+          whilst maintaining computational tractability by modeling the economy as a Partially Observable Markov Game (POMG), which maintains a fixed 
+          observation space for each agent. Finally, we structure our framework as repeatedly finding Stackelberg Equilbria, enabling theoretical understanding 
+          by allowing reduction to simpler subproblems.
+        </div>
+      </div>
+      <!--/ Introduction. -->
+
+      <!-- Example -->
+      <div>
+        <div style="height: 50px;"></div>
+        <div class="container is-max-desktop content">
+          <h2 class="title is-3">Motivating Example: Apple Picking Game</h2>
+        </div>
+
+        <div style="height: 15px;"></div>
+        <div class="container is-max-desktop content">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+              <img style="width: 500px" src="./static/images/social_dilemma.png" alt="social_dilemma">
+            </div>
+          </div>
+          <div>Figure 2: An example of social environment design as an apple picking game, built with Melting Pot 2.0 (Agapiou et al., 2022). 
+            Player agents observe a restricted view of their environment, and receive a mixed reward depending on the apples they collect and 
+            the apples their observable neighbors collect. The principal observes both an unrestricted view of the environment and the running 
+            totals of all the players’ cumulative extrinsic rewards, where it collects tax and redistributes wealth on the cumulated rewards at
+            the end of every tax period (50 timesteps), similar to Zheng et al. (2022). Rewards for the Principal are determined by the change
+             in value of the objective it is currently assigned by agent votes.</div>
           <br />
+          <div>
+            <div style="height: 15px;"></div>
+      <div class="container is-max-desktop content">
+        <div class="columns is-centered">
+        <div>
+          In order to give a motivating example for how preference elicitation for the principal in Social Environment Design can be used to align
+          policy-maker incentives, we have created a Sequential Social Dilemma Game inspired by the Harvest Game proposed in Perolat et al. (2017). 
+          The game is illustrated in Figure 2. The aim in Harvest Game is to collect apples, with each apple yielding a reward. If all apples in an 
+          area are harvested, they never grow back. The dilemma arises when individual self-interest drives rapid harvesting, which could permanently 
+          deplete resources. Thus, agents must sacrifice personal benefit and cooperate for collective well-being. One potential solution to this 
+          dilemma is through the use of a central government that taxes and redistributes apples. Thus, we have created a new game inspired by 
+          Zheng et al. (2022) in which a principal designs tax rates on apple collection and players vote on Utilitarian (productivity) vs. 
+          Egalitarian (equality) objectives for the principal. As players interact within this evolving environment, the principal faces the challenge 
+          of crafting policies that balance immediate economic incentives with sustainability goals. In order to achieve this, the principal must foster
+          cooperation among players, guiding them towards the Pareto-Efficient equilibrium that the players have chosen. Preliminary results were promising,
+           but further analysis is warranted.
         </div>
-        <div>Through the usage of DDIM, temporal abstraction, and low-dimensional generation, we find in
-          this figure that LCD is significantly faster during rollout and training than Diffuser. In addition, our
-          method is significantly faster to train than HULC, albeit slower during rollout. This is to be expected,
-          as HULC is not a diffusion model and only requires a single forward pass for generation. However,
-          when comparing to other diffusion models we find that our method is 3.3x-15x faster during inference
-          and 1.5x-3.7x faster during training, answering our second research question regarding how much
-          efficiency is gained by planning in a latent space. All numbers are taken from our own experiments
-          and server for reproducibility and fairness, including baselines.</div>
-        <h2 class="title is-3">Robust Against Hyperparameters</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-full-width">
-            <img style="width: 800px" src="./static/images/heatmap.png" alt="heatmap">
-          </div>
-        </div>
-        <div>In this figure, we show that our diffusion method is robust to several hyperparameters including a frame
-          offset o and the hidden dimensions of the model. Frame offset o controls the spacing between goal
-          states in the sampled latent plan, which affects the temporal resolution of the representations. We
-          consider augmenting our dataset by sampling a d ~ Unif[-o, o] for goal state s<sub>c+d</sub> rather than
-          just
-          s<sub>c</sub>, potentially improving generalization. However, we find that this effect is more or less
-          negligible.
-          Finally, we find our method is also robust with respect to the number of parameters, and instantiating
-          a larger model by increasing the model dimensions does not induce overfitting.</div>
-        <br />
       </div>
+
+          </div>
+      <!-- /Example -->
+
+    </div>
     </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- 
-      <div class="columns is-centered">
-
-        <div class="column">
-          <div class="content">
-            <h2 class="title is-3">Long-Horizon Performance</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos necessitatibus eius
-              perspiciatis magnam, nesciunt, ab quam atque velit aliquid repellendus pariatur. Porro
-              consequatur
-              repudiandae aliquam rem nostrum perferendis voluptate?
-            </p>
-            <div class="has-text-centered">
-              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/todo.mp4" type="video/mp4">
-              </video>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column">
-          <h2 class="title is-3">Language Generalization</h2>
-          <div class="columns is-centered">
-            <div class="column content">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos necessitatibus
-                eius
-                perspiciatis magnam, nesciunt, ab quam atque velit aliquid repellendus pariatur. Porro
-                consequatur
-                repudiandae aliquam rem nostrum perferendis voluptate?
-              </p>
-              <div class="has-text-centered">
-                <video id="matting-video" controls playsinline height="100%">
-                  <source src="./static/videos/todo.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Efficient Training & Inference</h2>
-
-          <h3 class="title is-4">Latent Diffusion</h3>
-          <div class="content has-text-justified">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos necessitatibus eius
-              perspiciatis magnam, nesciunt, ab quam atque velit aliquid repellendus pariatur. Porro
-              consequatur
-              repudiandae aliquam rem nostrum perferendis voluptate?
-            </p>
-          </div>
-
-        </div>
-        <br />
-      </div> -->
-
-
-
-      <!-- Concurrent Work. -->
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Related Work</h2>
-
-          <div class="content has-text-justified">
-            <p>
-              This project is built on some exceptional prior work.
-
-            </p>
-            <p>
-              <a href="https://diffusion-planning.github.io/">Planning with Diffusion for Flexible Behavior
-                Synthesis</a> introduces the base diffusion-based planning model that we adopt as the
-              high-level policy.
-            </p>
-            <p>
-              <a href="http://calvin.cs.uni-freiburg.de/">CALVIN</a>
-              provides the dataset and benchmark for evaluating the performance of our agent.
-            </p>
-            <p>
-              Finally, <a href="http://hulc.cs.uni-freiburg.de/">HULC</a> offers a strong baseline policy that
-              we use
-              for comparison and as our low-level controller.,
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--/ Concurrent Work. -->
-
-    </div>
-  </section>
+  
 
   <!--/ Animation. -->
 
 
-  </div>
-  </section>
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">Get Started</h2>
-      <pre><code>$ git clone git@github.com:ezhang7423/language-control-diffusion.git 
-$ make install && conda activate lcd
-$ lcd                                                                                             
- Usage: lcd [OPTIONS] COMMAND [ARGS]...                                                      
-                                                                                             
-╭─ Options ─────────────────────────────────────────────────────────────────────────────────╮
-│ --install-completion          Install completion for the current shell.                   │
-│ --show-completion             Show completion for the current shell, to copy it or        │
-│                               customize the installation.                                 │
-│ --help                        Show this message and exit.                                 │
-╰───────────────────────────────────────────────────────────────────────────────────────────╯
-╭─ Commands ────────────────────────────────────────────────────────────────────────────────╮
-│ rollout        Rollout in the environment for evaluation or dataset collection            │
-│ train_hulc     Train the original hulc model                                              │
-│ train_lcd      Train the original hulc model                                              │
-╰───────────────────────────────────────────────────────────────────────────────────────────╯
-</code></pre>
-    </div>
-  </section>
+  
 
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{zhang2024language,
-title={Language Control Diffusion: Efficiently Scaling through Space, Time, and Tasks},
-author={Edwin Zhang and Yujie Lu and Shinda Huang and William Yang Wang and Amy Zhang},
-booktitle={The Twelfth International Conference on Learning Representations},
+      <pre><code>@inproceedings{zhang2024sed,
+title={Social Environment Design},
+author={Edwin Zhang and Sadie Zhao and Tonghan Wang and Safwan Hossain and Henry Gasztowtt and Stephan Zheng and David C. Parkes and Milind Tambe and Yiling Chen},
+booktitle={International Conference on Machine Learning},
 year={2024},
 url={https://openreview.net/forum?id=0H6DFoZZXZ}
 }</code></pre>
