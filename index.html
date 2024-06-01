@@ -45,14 +45,15 @@
               <span class="author-block">
                 <a href="https://eddie.win">Eddie Zhang</a><sup>1,2</sup>,</span>
               <span class="author-block">
-                <a href="https://sites.google.com/view/sadiezhao/about?authuser=0">Sadie Zhao</a><sup>1</sup>,</span> 
+                <a href="https://sites.google.com/view/sadiezhao/about?authuser=0">Sadie Zhao</a><sup>1</sup>,</span>
               <span class="author-block">
                 <a href="https://tonghanwang.github.io/">Tonghan Wang</a><sup>1</sup>,</span>
               <span class="author-block">
                 <a href="https://safwanhossain.github.io/">Safwan Hossain</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://www.linkedin.com/in/henrygasztowtt/?originalSubdomain=uk">Henry Gasztowtt</a><sup>3</sup>
+                <a href="https://www.linkedin.com/in/henrygasztowtt/?originalSubdomain=uk">Henry
+                  Gasztowtt</a><sup>3</sup>
               </span>
               <span class="author-block">
                 <a href="https://www.stephanzheng.com/">Stephan Zheng</a><sup>4</sup>
@@ -138,226 +139,674 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Artificial Intelligence (AI) holds promise as a technology that can be used to improve government
-              and economic policy-making. This paper proposes a new research agenda towards this end by
-              introducing <strong>Social Environment Design</strong>, a general framework for the use of AI for automated
-              policy-making that connects with the Reinforcement Learning, EconCS, and Computational Social Choice communities. 
-              The framework seeks to capture general economic environments, includes voting on policy objectives, and gives a 
-              direction for the systematic analysis of government and economic policy through AI simulation. We highlight
-              key open problems for future research in AI-based policymaking. By solving these challenges, we hope to achieve 
-              various social welfare objectives, thereby promoting more ethical and responsible decision making.
-             
-            </p>
+  <div class="has-text-centered">
+    <p>Inexperienced with computer science or artificial intelligence? No worries! Hit the 'Beginner Friendly Explanation' :)</p>
+  </div>
+  <div class="content-toggle-buttons">
+    <button id="btnDetailed" onclick="showDetailed()" class="active">Detailed Explanation</button>
+    <button id="btnBeginner" onclick="showBeginner()">Beginner Friendly Explanation</button>
+  </div>
+ 
+  <div id="complex" style="display: block;">
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Artificial Intelligence (AI) holds promise as a technology that can be used to improve government
+                and economic policy-making. This paper proposes a new research agenda towards this end by
+                introducing <strong>Social Environment Design</strong>, a general framework for the use of AI for
+                automated
+                policy-making that connects with the Reinforcement Learning, EconCS, and Computational Social Choice
+                communities.
+                The framework seeks to capture general economic environments, includes voting on policy objectives, and
+                gives a
+                direction for the systematic analysis of government and economic policy through AI simulation. We
+                highlight
+                key open problems for future research in AI-based policymaking. By solving these challenges, we hope to
+                achieve
+                various social welfare objectives, thereby promoting more ethical and responsible decision making.
+
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <!--/ Abstract. -->
 
       <!-- Introduction. -->
-      <div>
-      <div style="height: 50px;"></div>
       <div class="container is-max-desktop content">
-        <h2 class="title is-3">Introduction</h2>
-        <div>  Economic policy formulation is a domain fraught with complexity, with traditional economic models providing limited 
-          foresight into the outcomes of policy decisions. Policy-makers must not only understand the immediate implications 
-          of individual policies but also their aggregate and long-term effects. In addition, human policy-maker incentives 
-          are often not aligned with the interests of the general public, and may instead prioritize special interests or 
-          reelection. In light of this, AI-based approaches to policy design that can simulate economies and target different 
-          objectives, hold the potential for improved policy understanding and formulation.</div>
-        <br />
-      </div>
-
-      <div style="height: 15px;"></div>
-      <div class="container is-max-desktop content">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-full-width">
-            <img style="width: 800px" src="./static/images/framework.png" alt="framework">
-          </div>
-        </div>
-        <div>Figure 1: The proposed framework. The process begins with voting, where human or AI players report preferences on social welfare objectives to a 
-          voting mechanism (1). This defines an objective for the Principal, who designs a parameterized 𝑁-player Partially Observable Markov Game. 
-          The players are the same as the voters. This POMG unfolds over several timesteps 𝑇. Following the POMG, game state information is extracted
-           to initiate a new round of voting, with the last POMG state used as the first game state of the new round. This whole process is repeated for 
-          𝜏 timesteps.</div>
-        <br />
-      </div>
-
-      <div style="height: 15px;"></div>
-      <div class="container is-max-desktop content">
-        <div class="columns is-centered has-text-centered">
-        </div>
-        <div>
-          In an era where AI is gaining increasing attention in governments, it is timely to understand its potential influence on future policy-making. Ideally, such a framework should satisfy the following desiderata:
-        </div>
-        <ol>
-          <li><strong>Alignment of policy-makers</strong> to the values of constituents, whilst ensuring fair and equitable representation.</li>
-          <li>Sufficient<strong> model expressivity</strong> to accurately represent the intricate governance structures found in the real world, capturing the subtleties and variances of socio-economic interactions.</li>
-          <li>Balance expressiveness with <strong> with computational tractability</strong>, making it feasible to scale to systems with a large number of agents.</li>
-          <li>Build<strong> theoretical understanding,</strong> enabling systematic analysis and offering a new lens on complex economic models.</li>
-        </ol>
-        <div>
-          Our work proposes a new framework, Social Environment Design, that lays out an agenda in making progress towards these desiderata. 
-          In our framework, illustrated in the figure above, we suggest addressing the concern of a misaligned policy-maker an AI-driven Principal policy-maker 
-          who seeks to achieve suggested policy goals, given by a voting mechanism. We capture the complexity of a general economic environment
-          whilst maintaining computational tractability by modeling the economy as a Partially Observable Markov Game (POMG), which maintains a fixed 
-          observation space for each agent. Finally, we structure our framework as repeatedly finding Stackelberg Equilbria, enabling theoretical understanding 
-          by allowing reduction to simpler subproblems.
-        </div>
-      </div>
-      <!--/ Introduction. -->
-
-      <!-- Example -->
-      <div>
         <div style="height: 50px;"></div>
-        <div class="container is-max-desktop content">
-          <h2 class="title is-3">Motivating Example: Apple Picking Game</h2>
-        </div>
-
-        <div style="height: 15px;"></div>
-        <div class="container is-max-desktop content">
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-full-width">
-              <img style="width: 500px" src="./static/images/social_dilemma.png" alt="social_dilemma">
+        <h2 class="title is-3">
+          <div class="toggle-button" onclick="toggleSection('intro')"
+            style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <span>Introduction</span>
+            <span class="toggle-icon">+</span>
+          </div>
+        </h2>
+        <div id="intro" class="collapse-content">
+          <div> Economic policy formulation is a domain fraught with complexity, with traditional economic models
+            providing limited
+            foresight into the outcomes of policy decisions. Policy-makers must not only understand the immediate
+            implications
+            of individual policies but also their aggregate and long-term effects. In addition, human policy-maker
+            incentives
+            are often not aligned with the interests of the general public, and may instead prioritize special interests
+            or
+            reelection. In light of this, AI-based approaches to policy design that can simulate economies and target
+            different
+            objectives, hold the potential for improved policy understanding and formulation.</div>
+          <br />
+          <div class="container is-max-desktop content">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-full-width">
+                <img style="width: 800px" src="./static/images/framework.png" alt="framework">
+              </div>
+            </div>
+            <div>Figure 1: The proposed framework. The process begins with voting, where human or AI players report
+              preferences on social welfare objectives to a
+              voting mechanism (1). This defines an objective for the Principal, who designs a parameterized 𝑁-player
+              Partially Observable Markov Game.
+              The players are the same as the voters. This POMG unfolds over several timesteps 𝑇. Following the POMG,
+              game state information is extracted
+              to initiate a new round of voting, with the last POMG state used as the first game state of the new round.
+              This whole process is repeated for
+              𝜏 timesteps.</div>
+            <br />
+            <div class="container is-max-desktop content">
+              <div class="columns is-centered has-text-centered">
+              </div>
+              <div>
+                In an era where AI is gaining increasing attention in governments, it is timely to understand its
+                potential influence on future policy-making. Ideally, such a framework should satisfy the following
+                desiderata:
+              </div>
+              <ol>
+                <li><strong>Alignment of policy-makers</strong> to the values of constituents, whilst ensuring fair and
+                  equitable representation.</li>
+                <li>Sufficient<strong> model expressivity</strong> to accurately represent the intricate governance
+                  structures found in the real world, capturing the subtleties and variances of socio-economic
+                  interactions.</li>
+                <li>Balance expressiveness with <strong> with computational tractability</strong>, making it feasible to
+                  scale to systems with a large number of agents.</li>
+                <li>Build<strong> theoretical understanding,</strong> enabling systematic analysis and offering a new
+                  lens
+                  on complex economic models.</li>
+              </ol>
+              <div>
+                Our work proposes a new framework, Social Environment Design, that lays out an agenda in making progress
+                towards these desiderata.
+                In our framework, illustrated in the figure above, we suggest addressing the concern of a misaligned
+                policy-maker an AI-driven Principal policy-maker
+                who seeks to achieve suggested policy goals, given by a voting mechanism. We capture the complexity of a
+                general economic environment
+                whilst maintaining computational tractability by modeling the economy as a Partially Observable Markov
+                Game (POMG), which maintains a fixed
+                observation space for each agent. Finally, we structure our framework as repeatedly finding Stackelberg
+                Equilbria, enabling theoretical understanding
+                by allowing reduction to simpler subproblems.
+                <br />
+              </div>
             </div>
           </div>
-          <div>Figure 2: An example of social environment design as an apple picking game, built with Melting Pot 2.0 (Agapiou et al., 2022). 
-            Player agents observe a restricted view of their environment, and receive a mixed reward depending on the apples they collect and 
-            the apples their observable neighbors collect. The principal observes both an unrestricted view of the environment and the running 
-            totals of all the players’ cumulative extrinsic rewards, where it collects tax and redistributes wealth on the cumulated rewards at
-            the end of every tax period (50 timesteps), similar to Zheng et al. (2022). Rewards for the Principal are determined by the change
-             in value of the objective it is currently assigned by agent votes.</div>
-          <br />
-          <div>
-            <div style="height: 15px;"></div>
-      <div class="container is-max-desktop content">
-        <div class="columns is-centered">
-        <div>
-          In order to give a motivating example for how preference elicitation for the principal in Social Environment Design can be used to align
-          policy-maker incentives, we have created a Sequential Social Dilemma Game inspired by the Harvest Game proposed in Perolat et al. (2017). 
-          The game is illustrated in Figure 2. The aim in Harvest Game is to collect apples, with each apple yielding a reward. If all apples in an 
-          area are harvested, they never grow back. The dilemma arises when individual self-interest drives rapid harvesting, which could permanently 
-          deplete resources. Thus, agents must sacrifice personal benefit and cooperate for collective well-being. One potential solution to this 
-          dilemma is through the use of a central government that taxes and redistributes apples. Thus, we have created a new game inspired by 
-          Zheng et al. (2022) in which a principal designs tax rates on apple collection and players vote on Utilitarian (productivity) vs. 
-          Egalitarian (equality) objectives for the principal. As players interact within this evolving environment, the principal faces the challenge 
-          of crafting policies that balance immediate economic incentives with sustainability goals. In order to achieve this, the principal must foster
-          cooperation among players, guiding them towards the Pareto-Efficient equilibrium that the players have chosen. Preliminary results were promising,
-           but further analysis is warranted.
         </div>
-      </div>
+        <!--/ Introduction. -->
 
+        <!-- Example -->
+        <div class="container is-max-desktop content">
+          <h2 class="title is-3">
+            <div class="toggle-button" onclick="toggleSection('example')"
+              style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+              <span>Motivating Example: Apple Picking Game</span>
+              <span class="toggle-icon">+</span>
+            </div>
+          </h2>
+          <div id="example" class="collapse-content">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-full-width">
+                <img style="width: 500px" src="./static/images/social_dilemma.png" alt="social_dilemma">
+              </div>
+            </div>
+            <div>Figure 2: An example of social environment design as an apple picking game, built with Melting Pot 2.0
+              (Agapiou et al., 2022).
+              Player agents observe a restricted view of their environment, and receive a mixed reward depending on the
+              apples they collect and
+              the apples their observable neighbors collect. The principal observes both an unrestricted view of the
+              environment and the running
+              totals of all the players’ cumulative extrinsic rewards, where it collects tax and redistributes wealth on
+              the cumulated rewards at
+              the end of every tax period (50 timesteps), similar to Zheng et al. (2022). Rewards for the Principal are
+              determined by the change
+              in value of the objective it is currently assigned by agent votes.</div>
+            <br />
+            <div>
+              <div class="container is-max-desktop content">
+                <div>
+                  In order to give a motivating example for how preference elicitation for the principal in Social
+                  Environment Design can be used to align
+                  policy-maker incentives, we have created a Sequential Social Dilemma Game inspired by the Harvest
+                  Game proposed in Perolat et al. (2017).
+                  The game is illustrated in Figure 2. The aim in Harvest Game is to collect apples, with each apple
+                  yielding a reward. If all apples in an
+                  area are harvested, they never grow back. The dilemma arises when individual self-interest drives
+                  rapid harvesting, which could permanently
+                  deplete resources. Thus, agents must sacrifice personal benefit and cooperate for collective
+                  well-being. One potential solution to this
+                  dilemma is through the use of a central government that taxes and redistributes apples. Thus, we
+                  have created a new game inspired by
+                  Zheng et al. (2022) in which a principal designs tax rates on apple collection and players vote on
+                  Utilitarian (productivity) vs.
+                  Egalitarian (equality) objectives for the principal. As players interact within this evolving
+                  environment, the principal faces the challenge
+                  of crafting policies that balance immediate economic incentives with sustainability goals. In order
+                  to achieve this, the principal must foster
+                  cooperation among players, guiding them towards the Pareto-Efficient equilibrium that the players
+                  have chosen. Preliminary results were promising,
+                  but further analysis is warranted.
+                </div>
+              </div>
+            </div>
           </div>
-      <!-- /Example -->
-      <!-- Where Do We Go From Here?-->
-      <div style="height: 50px;"></div>
-      <div class="container is-max-desktop content">
-        <h2 class="title is-3">Where Do We Go From Here?</h2>
-        <div>  Our work proposes a generalized framework that has the potential to improve decision-making — we
-          believe that further work will yield tangibly impactful positive results. However, we recognize 
-          that its current level of abstraction may obscure its ultimate potential and application. Our 
-          motivating example, while useful as a proof of concept, is clearly distant from real-world economic 
-          systems. While we recognize the distance, we posit that both a game where agents harvest apples and 
-          the NYSE lie on the same fundamental axis. In fact, we outline two natural axes that separate our 
-          example from societally impactful instantiations of SED in the future.
-          <br><br>
-          Our axes: <strong>Simulation Complexity</strong> and <strong>Principal Control</strong>
-          <ul>
-            <li>
-              The first and more immediately apparent axis is the complexity of the simulation that the Principal 
-              is parameterizing. One of the simplest instantiations of the simulation would be two independent agents 
-              harvesting apples, each with the desire to have as many apples as possible. In this situation, an optimal 
-              parameterization from the Principal might one that discourages overharvesting such that both agents are able 
-              to have more apples in the long term. A more complex instantiation, like our motivating example, contains more 
-              agents, with rewards based on social interactions, communal welfare, and varying levels of selfishness. Already, 
-              this is closer to the real world. As complexity scales, simulations may approximate economics in self-contained 
-              villages, then towns, cities, states, and so on. 
-            </li>
-            <li>
-              The second axis represents the control that the Principal has on the simulation. In this case, potential control 
-              is directly proportional to ability. While our motivating example is relatively complex, an advanced Principal 
-              with a knowledge of game theory and high-level math would be able to fully ‘solve the game’ by parameterizing the 
-              simulation with the mathematically optimal tax rate. In a situation with an obscured or dynamic equilibrium, an 
-              advanced Principal may have the ability to output adaptive code designed to produce parameterizations. An even more 
-              advanced Principal may output neural network weights for a network designed to produce parameterizations. The relationship 
-              between control and ability applies to inputs as well as outputs — a more sophisticated Principal would be able to process 
-              more sophisticated information from the agents within the simulation. Thus, as the ability of the Principal increases, the 
-              potential for a more effective instantiation of Social Environment Design increases as well. 
-            </li>
-          </ul>
+          <!-- /Example -->
+          <!-- Where Do We Go From Here?-->
+          <div class="container is-max-desktop content">
+            <h2 class="title is-3">
+              <div class="toggle-button" onclick="toggleSection('where')"
+                style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span>Where Do We Go From Here?</span>
+                <span class="toggle-icon">+</span>
+              </div>
+            </h2>
+            <div id="where" class="collapse-content">
+              <div class="container is-max-desktop content">
+                <div> Our work proposes a generalized framework that has the potential to improve decision-making — we
+                  believe that further work will yield tangibly impactful positive results. However, we recognize
+                  that its current level of abstraction may obscure its ultimate potential and application. Our
+                  motivating example, while useful as a proof of concept, is clearly distant from real-world economic
+                  systems. While we recognize the distance, we posit that both a game where agents harvest apples and
+                  the NYSE lie on the same fundamental axis. In fact, we outline two natural axes that separate our
+                  example from societally impactful instantiations of SED in the future.
+                  <br><br>
+                  Our axes: <strong>Simulation Complexity</strong> and <strong>Principal Control</strong>
+                  <ul>
+                    <li>
+                      The first and more immediately apparent axis is the complexity of the simulation that the
+                      Principal
+                      is parameterizing. One of the simplest instantiations of the simulation would be two independent
+                      agents
+                      harvesting apples, each with the desire to have as many apples as possible. In this situation, an
+                      optimal
+                      parameterization from the Principal might one that discourages overharvesting such that both
+                      agents are able
+                      to have more apples in the long term. A more complex instantiation, like our motivating example,
+                      contains more
+                      agents, with rewards based on social interactions, communal welfare, and varying levels of
+                      selfishness. Already,
+                      this is closer to the real world. As complexity scales, simulations may approximate economics in
+                      self-contained
+                      villages, then towns, cities, states, and so on.
+                    </li>
+                    <li>
+                      The second axis represents the control that the Principal has on the simulation. In this case,
+                      potential control
+                      is directly proportional to ability. While our motivating example is relatively complex, an
+                      advanced Principal
+                      with a knowledge of game theory and high-level math would be able to fully ‘solve the game’ by
+                      parameterizing the
+                      simulation with the mathematically optimal tax rate. In a situation with an obscured or dynamic
+                      equilibrium, an
+                      advanced Principal may have the ability to output adaptive code designed to produce
+                      parameterizations. An even more
+                      advanced Principal may output neural network weights for a network designed to produce
+                      parameterizations. The relationship
+                      between control and ability applies to inputs as well as outputs — a more sophisticated Principal
+                      would be able to process
+                      more sophisticated information from the agents within the simulation. Thus, as the ability of the
+                      Principal increases, the
+                      potential for a more effective instantiation of Social Environment Design increases as well.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- /Where Do We Go From Here?-->
+
+            <!-- What Are The Steps To Get There?-->
+            <div class="container is-max-desktop content">
+              <h2 class="title is-3">
+                <div class="toggle-button" onclick="toggleSection('steps')"
+                  style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                  <span>What Are The Steps To Get There?</span>
+                  <span class="toggle-icon">+</span>
+                </div>
+              </h2>
+              <div id="steps" class="collapse-content">
+                <div class="container is-max-desktop content">
+                  <div>
+                    Clearly, we have steps to take in two directions — simulating real-world complexity, and designing
+                    an
+                    incredibly advanced Principal. Really,
+                    we have a marathon to run in two directions — this distance represents a colossal gap between the
+                    technology that we have and the technology
+                    that we need. Though this gap is colossal, the Colosseum stands tall two thousand years after its
+                    construction, and we’ve heard that it wasn’t
+                    built in a day. We foresee many implementations of SED, each better than the last. Here, we present
+                    a
+                    simplified outline what some of those
+                    implementations may look like.
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-full-width">
+                        <img style="width: 500px" src="./static/images/graph.png" alt="graph">
+                      </div>
+                    </div>
+                    <ul>
+                      <li>
+                        <strong>SED v1</strong>: Here, we may see a small population in an already-governed community,
+                        such as a neighborhood or a mobile home park, that are
+                        looking to improve the place that they live. In this hypothetical, each member of the population
+                        donates some small sum of money, along
+                        with the changes they wish to see — perhaps a new park, or an after-school organization that
+                        looks
+                        after children before their parents
+                        get home from work. The Principal will take into account their desires, allocate the money as it
+                        sees fit, and gauge the satisfaction of
+                        the population. The Principal will continue to optimize for the satisfaction of the population
+                        over repeated monetary allocations, leading
+                        to a happier population.
+                      </li>
+                      <div class="columns is-centered has-text-centered">
+                        <div class="column is-full-width">
+                          <img style="width: 500px" src="./static/images/sedv1.png" alt="sedv1">
+                        </div>
+                      </div>
+                      <li>
+                        <strong>SED v2</strong>: In this case, we see a larger and more complex population, and a
+                        Principal tasked with more than just monetary
+                        allocation. This may take the form of a larger town or city, in which the Principal deals with
+                        both monetary allocation, via taxes rather
+                        than donations, and the drafting of legal policies. These legal policies may concern the local
+                        tax
+                        system itself, the operation of public
+                        transport and infrastructure, and more — the Principal would have responsibilities akin to the
+                        legislature of such a population.
+                      </li>
+                      <div class="columns is-centered has-text-centered">
+                        <div class="column is-full-width">
+                          <img style="width: 500px" src="./static/images/sedv2.png" alt="sedv2">
+                        </div>
+                      </div>
+                      <li>
+                        <strong>SED v3</strong>: As the population and ability of the Principal increases, the possible
+                        instantiations for SED grow as well.
+                        An advancement from SED v2 may be the utilization of SED within a state in the United States, or
+                        for a small small country. Of course,
+                        this would be dependent on the success of SED v2, as well as the state of pertinent technology
+                        needed for a v3 Principal. This prerequisite
+                        applies to each advancement — SED v2 would happen only after the conclusive success of SED v1.
+                      </li>
+                      <div class="columns is-centered has-text-centered">
+                        <div class="column is-full-width">
+                          <img style="width: 500px" src="./static/images/sedv3.png" alt="sedv3">
+                        </div>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /What Are The Steps To Get There??-->
+
+              <!-- /How Do We Take The Steps?-->
+              <div class="container is-max-desktop content">
+                <h2 class="title is-3">
+                  <div class="toggle-button" onclick="toggleSection('how')"
+                    style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                    <span>How Do We Take The Steps?</span>
+                    <span class="toggle-icon">+</span>
+                  </div>
+                </h2>
+                <div id="how" class="collapse-content">
+                  <div> We are under no illusion that this will be easy — each of these steps represents a large
+                    technological and ideological jump. Furthermore,
+                    we are acutely aware that SED will affect people beyond researchers and academics. Thus, every
+                    person
+                    reading this, regardless of skillsets or
+                    familiarity with artificial intelligence, deserves a chance to contribute to this cause. With this
+                    in
+                    mind, we propose a framework, paralleling SED,
+                    that will allow for the contribution of anybody and everybody who believes in Social Environment
+                    Design.</div>
+                  <br />
+                  <a
+                    href="https://founding-zero.notion.site/SED-Contributor-Framework-6191895314c24cae8cc56acdc6dbe265?pvs=4">Contributor
+                    Framework</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <br />
-      </div>
-      <!-- /Where Do We Go From Here?-->
-
-      <!-- What Are The Steps To Get There?-->
-      <div style="height: 50px;"></div>
-      <div class="container is-max-desktop content">
-        <h2 class="title is-3">What Are The Steps To Get There?</h2>
-        <div> 
-          Possible Figure: Graph with axes of complexity and Principal control, with motivating example in lower left and ‘real-world’ in upper right
-          <br>
-          Clearly, we have steps to take in two directions — simulating real-world complexity, and designing an incredibly advanced Principal. Really, 
-          we have a marathon to run in two directions — this distance represents a colossal gap between the technology that we have and the technology 
-          that we need. Though this gap is colossal, the Colosseum stands tall two thousand years after its construction, and we’ve heard that it wasn’t 
-          built in a day. We foresee many implementations of SED, each better than the last. Here, we present a simplified outline what some of those 
-          implementations may look like.
-          <ul>
-            <li>
-              <strong>SED v1</strong>:  Here, we may see a small population in an already-governed community, such as a neighborhood or a mobile home park, that are 
-              looking to improve the place that they live. In this hypothetical, each member of the population donates some small sum of money, along 
-              with the changes they wish to see — perhaps a new park, or an after-school organization that looks after children before their parents 
-              get home from work. The Principal will take into account their desires, allocate the money as it sees fit, and gauge the satisfaction of 
-              the population. The Principal will continue to optimize for the satisfaction of the population over repeated monetary allocations, leading 
-              to a happier population. 
-            </li>
-            <li>
-              <strong>SED v2</strong>: In this case, we see a larger and more complex population, and a Principal tasked with more than just monetary 
-              allocation. This may take the form of a larger town or city, in which the Principal deals with both monetary allocation, via taxes rather 
-              than donations, and the drafting of legal policies. These legal policies may concern the local tax system itself, the operation of public 
-              transport and infrastructure, and more — the Principal would have responsibilities akin to the legislature of such a population.
-            </li>
-            <li>
-              <strong>SED v3</strong>: As the population and ability of the Principal increases, the possible instantiations for SED grow as well. 
-              An advancement from SED v2 may be the utilization of SED within a state in the United States, or for a small small country. Of course, 
-              this would be dependent on the success of SED v2, as well as the state of pertinent technology needed for a v3 Principal. This prerequisite 
-              applies to each advancement — SED v2 would happen only after the conclusive success of SED v1.
-            </li>
-          </ul>
+    </section>
+  </div>
+  <!-- SIMPLE SECTION-->
+  <div id="simple" style="display: none;">
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Artificial Intelligence, or AI, is an incredibly broad field encompassing topics like Large Language
+                Models (like ChatGPT), machine vision (think of <a
+                  href=" https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10890665/#:~:text=Artificial intelligence diagnoses were performed,patients with adenocarcinoma in situ">AI
+                  looking at X-Rays to find tumors</a>), and much more. Our research focuses on a different
+                implementation, concerning how AI could be applied in government and economics. Specifically, we are
+                proposing a framework in which AI would make more informed and unbiased decisions in government roles.
+                We call this framework <strong>Social Environment Design</strong>.
+              </p>
+            </div>
+          </div>
         </div>
-        <br />
       </div>
-      <!-- /What Are The Steps To Get There??-->
+      <!--/ Abstract. -->
 
-      <!-- /How Do We Take The Steps?-->
-      <div style="height: 50px;"></div>
+      <!-- Introduction. -->
       <div class="container is-max-desktop content">
-        <h2 class="title is-3">How Do We Take The Steps?</h2>
-        <div>  We are under no illusion that this will be easy — each of these steps represents a large technological and ideological jump. Furthermore, 
-          we are acutely aware that SED will affect people beyond researchers and academics. Thus, every person reading this, regardless of skillsets or 
-          familiarity with artificial intelligence, deserves a chance to contribute to this cause. With this in mind, we propose a framework, paralleling SED, 
-          that will allow for the contribution of anybody and everybody who believes in Social Environment Design.</div>
-        <br />
-        <a href="https://founding-zero.notion.site/SED-Contributor-Framework-6191895314c24cae8cc56acdc6dbe265?pvs=4">Contributor Framework</a>
-      </div>
-    </div>
-    </div>
-    </div>
-  </section>
+        <div style="height: 50px;"></div>
+        <h2 class="title is-3">
+          <div class="toggle-button" onclick="toggleSection('intro-simple')"
+            style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <span>Introduction</span>
+            <span class="toggle-icon">+</span>
+          </div>
+        </h2>
+        <div id="intro-simple" class="collapse-content">
+          <div> Economic policy is a very complex field, and current economic models are only able to provide limited
+            foresight into the outcomes of policy decisions. Human policy-makers are tasked with understanding the
+            immediate implication of individual policies, but also their long-term effects and their interactions with
+            other policies. Furthermore, these policy-makers are often misaligned, showing bias towards re-election or
+            their personal interests. We believe that artificial intelligence represents an opportunity to ensure
+            alignment with the general population, as well as better managing the information necessary to make these
+            decisions. Thus, our work comprises of a framework in which AI is in a position to make better informed,
+            unbiased policy decisions.</div>
+          <br />
+          <div class="container is-max-desktop content">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-full-width">
+                <img style="width: 800px" src="./static/images/framework_simple.png" alt="framework_simple">
+              </div>
+            </div>
+            <div>Figure 1: The proposed framework. In the Inner Simulation, there are several agents in an environment.
+              You can imagine each agent as a simulated person, and the environment to be a video game. Each agent wants
+              to do as well as possible in the game by maximizing their reward function. This is more complicated than
+              it sounds — you can imagine Pac-Man’s reward function being maximized by him eating more pellets! These
+              agents ‘play’ in the inner simulation for a while, until it becomes time to vote. At that point, they all
+              report their preferences about the inner simulation — in our Pac-Man example, Pac-Man’s preference might
+              be for more pellets, and ghosts might report their preference to be able to move faster. All of the votes
+              are considered, and an objective is outputted. We call this phase, where votes are considered and an
+              objective is outputted, the Voting Mechanism. The objective is then passed to an AI, which we call the
+              Principal. The Principal sees this objective and drafts new rules for the game — we call these new rules a
+              reparameterization. Then, the process begins anew! </div>
+            <br />
+            <div class="container is-max-desktop content">
+              <div class="columns is-centered has-text-centered">
+              </div>
+              <div>
+                When designing this framework, we wanted to try to satisfy several requirements.
+              </div>
+              <ol>
+                <li>First, the framework should ensure the <strong>alignment </strong> of the Principal to the
+                    values of the
+                    agents in the Inner Simulation, with fair and equitable representation.</li>
+                <li>We want to be able to <strong>accurately represent</strong> the complicated government and economic
+                  structures that
+                  we see in the real world today.</li>
+                <li>We need the framework to be <strong>efficient</strong> — it takes a lot of computer power
+                  (expensive!) to run a
+                  framework like this, and we want it to be able to scale to large scenarios. You can think of this like
+                  fuel-efficiency — we want our miles-per-gallon to be very high.</li>
+                <li>Lastly, we want this framework to help <strong>develop our theoretical understanding</strong> of
+                  complex economics. </li>
+              </ol>
+              <div>
+                We argue that Social Environment Design does satisfy these requirements! <strong>Point 1: </strong>In
+                our framework,
+                illustrated in the figure above, we suggest addressing the concern of a misaligned policy-maker by using
+                an AI-driven Principal policy-maker who seeks to achieve suggested policy goals, given by a voting
+                mechanism, reducing misalignment between the policy-maker and the population that it represents.
+                <strong>Point 2 and 3:</strong> Using some fancy math called Game Theory, we are able to create a
+                complex environment, but still
+                remain ‘fuel-efficient’ by hiding most of that environment from each player (just like you! Most of the
+                world is hidden from you right now; you can’t see Antarctica from where you are). <strong>Point
+                  4:</strong> By
+                structuring our framework as repeated loops of the same process, we can reduce the larger economic
+                problem into many smaller problems, which will enable us to develop better theoretical understanding of
+                complex economics.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Introduction. -->
 
-  
+        <!-- Example -->
+        <div class="container is-max-desktop content">
+          <h2 class="title is-3">
+            <div class="toggle-button" onclick="toggleSection('example-simple')"
+              style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+              <span>Motivating Example: Apple Picking Game</span>
+              <span class="toggle-icon">+</span>
+            </div>
+          </h2>
+          <div id="example-simple" class="collapse-content">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-full-width">
+                <img style="width: 500px" src="./static/images/social_dilemma.png" alt="social_dilemma">
+              </div>
+            </div>
+            <div>This image shows the Inner Simulation in a proof-of-concept example of Social Environment Design. Here,
+              the agents find themselves amongst apple trees, and are able to harvest these apples. The reward function
+              of each agent depends on how many apples the individual agent has picked (intrinsic reward) and how many
+              apples the other agents have picked (extrinsic reward). At set intervals, the apples that have been
+              accumulated by each agent are taxed. These taxed apples are redistributed to all of the agents. The
+              Principal is able to reparameterize (draft new rules) the Inner Simulation by changing the tax tax rates.
+            </div>
+            <br />
+            <div>
+              <div class="container is-max-desktop content">
+                <div>
+                  Here, we present a motivating example for Social Environment Design, implemented for a small, simple
+                  simulation called Harvest Game. The aim in Harvest Game is to collect apples, with each apple yielding
+                  a reward. If all apples in an area are harvested, they never grow back. A dilemma arises when
+                  individual self-interest drives rapid harvesting, which could permanently deplete resources. Thus, the
+                  collective well-being of the population is dependent on individual agents sacrificing personal
+                  benefit. One potential solution to this dilemma is through the use of a central government (or a
+                  Principal!) that taxes and redistributes apples. In this example, players vote on whether they prefer
+                  a utilitarian society (valuing overall productivity) or an egalitarian society (valuing equality). As
+                  players interact within this evolving environment, the Principal faces the challenge of crafting
+                  tax-rates that balance immediate economic incentives with sustainability goals. In order to achieve
+                  this, the principal must foster cooperation among players, guiding them towards the type of society
+                  that the players have chosen. The initial results of this example were promising, but further analysis
+                  is warranted.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Example -->
+          <!-- Where Do We Go From Here?-->
+          <div class="container is-max-desktop content">
+            <h2 class="title is-3">
+              <div class="toggle-button" onclick="toggleSection('where-simple')"
+                style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <span>Where Do We Go From Here?</span>
+                <span class="toggle-icon">+</span>
+              </div>
+            </h2>
+            <div id="where-simple" class="collapse-content">
+              <div class="container is-max-desktop content">
+                <div> Our work proposes a generalized framework that has the potential to improve decision-making, and
+                  we believe that further work will yield results that are impactful in the real world. However, we
+                  understand that our framework is abstract, and so it may be difficult to see its future potential for
+                  application; our motivating example, while useful as a proof of concept, is clearly distant from
+                  real-world economic systems. While we recognize the distance, we posit that both a game where agents
+                  harvest apples lies on the same fundamental axis as the New York Stock Exchange. In fact, we outline
+                  two clear axes that separate our example from societally impactful instantiations of SED in the
+                  future.
+                  <br><br>
+                  Our axes: <strong>Simulation Complexity</strong> and <strong>Principal Control</strong>
+                  <ul>
+                    <li>
+                      The first and more immediately apparent axis is the complexity of the simulation (or real world
+                      environment). As an example, one of the simplest instances of the simulation would be two
+                      independent agents harvesting apples, each having a reward function that is maximized solely by
+                      increasing their own apples. In this situation, the best rules drafted by the Principal might
+                      discourage overharvesting of the apples so that both agents are able to have more apples in the
+                      long term. A more complex instance, like our earlier motivating example, contains more agents,
+                      with reward functions based on social interactions, communal welfare, and varying levels of
+                      selfishness. Already, this is closer to the real world. As complexity scales, simulations may
+                      approximate economics in self-contained villages, then towns, cities, states, and so on.
+                    </li>
+                    <li>
+                      The second axis represents the control that the Principal has on the simulation. In this case,
+                      potential control is directly proportional to ability. In the last ten years, artificial
+                      intelligence has advanced exponentially. However, there is still much, much progress to be made
+                      throughout the field broadly. We are still far from the technology that would enable artificial
+                      intelligence to play the role of Principal for even a small town. As we continue along this path
+                      of advancement, however, the potential Principals will be able to effectively participate in more
+                      real-world environments. </br>
+                      While our motivating example is fairly complex, an advanced Principal with a knowledge of game
+                      theory and high-level math would be able to fully ‘solve the game’ by parameterizing the
+                      simulation with the mathematically optimal tax rate. In a situation with an ever-changing
+                      ‘solution’, an advanced Principal may have the ability to output adaptive code designed to produce
+                      parameterizations. This relationship between control and ability applies to inputs as well as
+                      outputs — a more sophisticated Principal would be able to process more sophisticated information
+                      from the agents within the simulation. Thus, as the ability of the Principal increases, the
+                      effectiveness of the voting mechanism increases as well.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- /Where Do We Go From Here?-->
+
+            <!-- What Are The Steps To Get There?-->
+            <div class="container is-max-desktop content">
+              <h2 class="title is-3">
+                <div class="toggle-button" onclick="toggleSection('steps-simple')"
+                  style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                  <span>What Are The Steps To Get There?</span>
+                  <span class="toggle-icon">+</span>
+                </div>
+              </h2>
+              <div id="steps-simple" class="collapse-content">
+                <div class="container is-max-desktop content">
+                  <div>
+                    Clearly, we have steps to take in two directions — simulating real-world complexity, and designing
+                    an incredibly advanced Principal. Really, we have a marathon to run in two directions — this
+                    distance represents a colossal gap between the technology that we have and the technology that we
+                    need. Though this gap is colossal, Rome wasn’t built in a day. We foresee many implementations of
+                    SED, each better than the last. Here, we present a simplified outline what some of those
+                    implementations may look like.
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-full-width">
+                        <img style="width: 500px" src="./static/images/graph.png" alt="graph">
+                      </div>
+                    </div>
+                    <ul>
+                      <li>
+                        <strong>SED v1</strong>: Here, we may see a small population in an already-governed community,
+                        such as a neighborhood or a mobile home park, that are
+                        looking to improve the place that they live. In this hypothetical, each member of the population
+                        donates some small sum of money, along
+                        with the changes they wish to see — perhaps a new park, or an after-school organization that
+                        looks
+                        after children before their parents
+                        get home from work. The Principal will take into account their desires, allocate the money as it
+                        sees fit, and gauge the satisfaction of
+                        the population. The Principal will continue to optimize for the satisfaction of the population
+                        over repeated monetary allocations, leading
+                        to a happier population.
+                      </li>
+                      <div class="columns is-centered has-text-centered">
+                        <div class="column is-full-width">
+                          <img style="width: 500px" src="./static/images/sedv1.png" alt="sedv1">
+                        </div>
+                      </div>
+                      <li>
+                        <strong>SED v2</strong>: In this case, we see a larger and more complex population, and a
+                        Principal tasked with more than just monetary
+                        allocation. This may take the form of a larger town or city, in which the Principal deals with
+                        both monetary allocation, via taxes rather
+                        than donations, and the drafting of legal policies. These legal policies may concern the local
+                        tax
+                        system itself, the operation of public
+                        transport and infrastructure, and more — the Principal would have responsibilities akin to the
+                        legislature of such a population.
+                      </li>
+                      <div class="columns is-centered has-text-centered">
+                        <div class="column is-full-width">
+                          <img style="width: 500px" src="./static/images/sedv2.png" alt="sedv2">
+                        </div>
+                      </div>
+                      <li>
+                        <strong>SED v3</strong>: As the population and ability of the Principal increases, the possible
+                        instantiations for SED grow as well.
+                        An advancement from SED v2 may be the utilization of SED within a state in the United States, or
+                        for a small small country. Of course,
+                        this would be dependent on the success of SED v2, as well as the state of pertinent technology
+                        needed for a v3 Principal. This prerequisite
+                        applies to each advancement — SED v2 would happen only after the conclusive success of SED v1.
+                      </li>
+                      <div class="columns is-centered has-text-centered">
+                        <div class="column is-full-width">
+                          <img style="width: 500px" src="./static/images/sedv3.png" alt="sedv3">
+                        </div>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /What Are The Steps To Get There??-->
+
+              <!-- /How Do We Take The Steps?-->
+              <div class="container is-max-desktop content">
+                <h2 class="title is-3">
+                  <div class="toggle-button" onclick="toggleSection('how-simple')"
+                    style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                    <span>How Do We Take The Steps?</span>
+                    <span class="toggle-icon">+</span>
+                  </div>
+                </h2>
+                <div id="how-simple" class="collapse-content">
+                  <div> We are under no illusion that this will be easy — each of these steps represents a large
+                    technological and ideological jump. Furthermore,
+                    we are acutely aware that SED will affect people beyond researchers and academics. Thus, every
+                    person
+                    reading this, regardless of skillsets or
+                    familiarity with artificial intelligence, deserves a chance to contribute to this cause. With this
+                    in
+                    mind, we propose a framework, paralleling SED,
+                    that will allow for the contribution of anybody and everybody who believes in Social Environment
+                    Design.</div>
+                  <br />
+                  <a
+                    href="https://founding-zero.notion.site/SED-Contributor-Framework-6191895314c24cae8cc56acdc6dbe265?pvs=4">Contributor
+                    Framework</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+
 
   <!--/ Animation. -->
 
 
-  
+
 
 
   <section class="section" id="BibTeX">
@@ -389,6 +838,8 @@ url={https://arxiv.org/abs/2402.14090}
       </div>
     </div>
   </footer>
+
+
 
 </body>
 

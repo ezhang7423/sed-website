@@ -19,6 +19,45 @@ function setInterpolationImage(i) {
   $('#interpolation-image-wrapper').empty().append(image);
 }
 
+function toggleSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  var icon = section.previousElementSibling.querySelector('.toggle-icon');
+  if (section.classList.contains('expanded')) {
+    section.classList.remove('expanded');
+    icon.textContent = '+'; 
+  } else {
+    section.classList.add('expanded');
+    icon.textContent = '-';
+  }
+}
+function showDetailed() {
+  var simpleContent = document.getElementById('simple');
+  var complexContent = document.getElementById('complex');
+  var btnDetailed = document.getElementById('btnDetailed');
+  var btnBeginner = document.getElementById('btnBeginner');
+  
+  simpleContent.style.display = 'none';
+  complexContent.style.display = 'block';
+  
+  btnDetailed.classList.add('active');
+  btnBeginner.classList.remove('active');
+}
+
+function showBeginner() {
+  var simpleContent = document.getElementById('simple');
+  var complexContent = document.getElementById('complex');
+  var btnDetailed = document.getElementById('btnDetailed');
+  var btnBeginner = document.getElementById('btnBeginner');
+  
+  simpleContent.style.display = 'block';
+  complexContent.style.display = 'none';
+  
+  btnBeginner.classList.add('active');
+  btnDetailed.classList.remove('active');
+}
+
+
+
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
