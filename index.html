@@ -140,13 +140,14 @@
   </section>
 
   <div class="has-text-centered">
-    <p>Inexperienced with computer science or artificial intelligence? No worries! Hit the 'Beginner Friendly Explanation' :)</p>
+    <p>Inexperienced with computer science or artificial intelligence? No worries! Hit the 'Beginner Friendly
+      Explanation' :)</p>
   </div>
   <div class="content-toggle-buttons">
     <button id="btnDetailed" onclick="showDetailed()" class="active">Detailed Explanation</button>
     <button id="btnBeginner" onclick="showBeginner()">Beginner Friendly Explanation</button>
   </div>
- 
+
   <div id="complex" style="display: block;">
     <section class="section">
       <div class="container is-max-desktop">
@@ -489,6 +490,13 @@
         </div>
     </section>
   </div>
+
+
+
+
+
+
+
   <!-- SIMPLE SECTION-->
   <div id="simple" style="display: none;">
     <section class="section">
@@ -524,14 +532,14 @@
           </div>
         </h2>
         <div id="intro-simple" class="collapse-content">
-          <div> Economic policy is a very complex field, and current economic models are only able to provide limited
-            foresight into the outcomes of policy decisions. Human policy-makers are tasked with understanding the
+          <div> Economic policy is a very complex field, and current economic models are often unable to accurately
+            predict the effects of economic policy decisions. Human policy-makers are tasked with understanding the
             immediate implication of individual policies, but also their long-term effects and their interactions with
-            other policies. Furthermore, these policy-makers are often misaligned, showing bias towards re-election or
-            their personal interests. We believe that artificial intelligence represents an opportunity to ensure
-            alignment with the general population, as well as better managing the information necessary to make these
-            decisions. Thus, our work comprises of a framework in which AI is in a position to make better informed,
-            unbiased policy decisions.</div>
+            other policies. Furthermore, these policy-makers are often subject to bias from lobbyists or their own
+            re-election campaigns. We believe that artificial intelligence represents an opportunity to ensure that
+            economic policy is aligned with the goals of the general population, as well as better managing the
+            information necessary to make these decisions. Thus, our work offers a framework in which AI is in a
+            position to make better informed, unbiased policy decisions.</div>
           <br />
           <div class="container is-max-desktop content">
             <div class="columns is-centered has-text-centered">
@@ -539,28 +547,45 @@
                 <img style="width: 800px" src="./static/images/framework_simple.png" alt="framework_simple">
               </div>
             </div>
-            <div>Figure 1: The proposed framework. In the Inner Simulation, there are several agents in an environment.
-              You can imagine each agent as a simulated person, and the environment to be a video game. Each agent wants
-              to do as well as possible in the game by maximizing their reward function. This is more complicated than
-              it sounds — you can imagine Pac-Man’s reward function being maximized by him eating more pellets! These
-              agents ‘play’ in the inner simulation for a while, until it becomes time to vote. At that point, they all
-              report their preferences about the inner simulation — in our Pac-Man example, Pac-Man’s preference might
-              be for more pellets, and ghosts might report their preference to be able to move faster. All of the votes
-              are considered, and an objective is outputted. We call this phase, where votes are considered and an
-              objective is outputted, the Voting Mechanism. The objective is then passed to an AI, which we call the
-              Principal. The Principal sees this objective and drafts new rules for the game — we call these new rules a
-              reparameterization. Then, the process begins anew! </div>
+            <div>Figure 1: The proposed framework. In the <strong>Inner Simulation</strong>, there are several players
+              in an environment.
+              You can imagine each player as a simulated person, and the environment to be some video game. Each player
+              wants to do as well as possible in the game by maximizing their score. After the Inner Simulation has run
+              for some time, the players vote, giving their preferences on the rules of the game. The Principal takes
+              all of these votes, and makes new rules for the game. With the new rules for the game, the Inner
+              Simulation runs until it becomes time to vote again. Then, the process continues. </div>
             <br />
             <div class="container is-max-desktop content">
               <div class="columns is-centered has-text-centered">
               </div>
               <div>
+                As an example, let’s picture the Inner Simulation as the game Pac-Man, where Pac-Man and all of the
+                ghosts are the players, and the environment is the maze and all of the pellets. It’s important to note
+                that no actual people are controlling any of the players — Pac-Man moves around on his own, just like
+                the ghosts. Remember that the goal of each player is to get a higher score: Pac-Man gets a higher score
+                by eating more pellets, and the ghosts get higher scores by catching Pac-Man. Pac-Man and the ghosts
+                play in the Inner Simulation for a while, until it becomes time to vote. At that point, they all report
+                their preferences about the inner simulation — Pac-Man’s preference might be for more pellets, and
+                ghosts might report their preference to be able to move faster. All of these votes are considered by the
+                Principal — in this example, we can think of the Principal as the person who coded the Pac-Man game. The
+                Principal looks at all of the votes and changes the rules of the Pac-Man game. Then, the new Inner
+                Simulation runs again, and the process continues!
+                <br />
+                As much as we love Pac-Man, the goal of our work is not to better design video games. However, this
+                framework is generally applicable. Imagine a small town governed by a mayor. After the election, the
+                population of the town would not have guaranteed influence on the actions of the mayor, and instead have
+                to trust that the mayor had their best interests at heart. In this scenario, Social Environment Design
+                would guarantee that the population had a direct say in the usage of their tax dollars, and know that
+                their votes had direct influence in the governance of the town. Beyond eliminated the need for blind
+                trust, the Principal has the advantage of being able to consider much more information, and thus be more
+                contextualized, than any human.
+                <br />
                 When designing this framework, we wanted to try to satisfy several requirements.
               </div>
               <ol>
-                <li>First, the framework should ensure the <strong>alignment </strong> of the Principal to the
-                    values of the
-                    agents in the Inner Simulation, with fair and equitable representation.</li>
+                <li>First, the framework should ensure the <strong>alignment</strong> of the Principal to the values of
+                  the players in
+                  the Inner Simulation, with fair and equitable representation.</li>
                 <li>We want to be able to <strong>accurately represent</strong> the complicated government and economic
                   structures that
                   we see in the real world today.</li>
@@ -574,17 +599,16 @@
               <div>
                 We argue that Social Environment Design does satisfy these requirements! <strong>Point 1: </strong>In
                 our framework,
-                illustrated in the figure above, we suggest addressing the concern of a misaligned policy-maker by using
-                an AI-driven Principal policy-maker who seeks to achieve suggested policy goals, given by a voting
-                mechanism, reducing misalignment between the policy-maker and the population that it represents.
-                <strong>Point 2 and 3:</strong> Using some fancy math called Game Theory, we are able to create a
-                complex environment, but still
-                remain ‘fuel-efficient’ by hiding most of that environment from each player (just like you! Most of the
-                world is hidden from you right now; you can’t see Antarctica from where you are). <strong>Point
-                  4:</strong> By
-                structuring our framework as repeated loops of the same process, we can reduce the larger economic
-                problem into many smaller problems, which will enable us to develop better theoretical understanding of
-                complex economics.
+                illustrated in the figure above, we suggest addressing the concern of a misaligned decision-maker by
+                using an Principal who seeks to achieve goals that directly stem from votes. The Principal can’t be
+                corrupted by money or re-election, unlike many human decision-makers. <strong>Points 2 and 3:</strong>
+                Using some fancy
+                math called Game Theory, we are able to create a complex environment, but still remain ‘fuel-efficient’
+                by hiding most of that environment from each player (just like you! Most of the world is hidden from you
+                right now; you can’t see Antarctica from where you are). <strong>Point 4:</strong> By structuring our
+                framework as
+                repeated loops of the same process, we can reduce the larger economic problem into many smaller
+                problems, which will enable us to develop better theoretical understanding of complex economics.
               </div>
             </div>
           </div>
@@ -596,7 +620,7 @@
           <h2 class="title is-3">
             <div class="toggle-button" onclick="toggleSection('example-simple')"
               style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
-              <span>Motivating Example: Apple Picking Game</span>
+              <span>In-Depth Example: Harvest Game</span>
               <span class="toggle-icon">+</span>
             </div>
           </h2>
@@ -606,30 +630,35 @@
                 <img style="width: 500px" src="./static/images/social_dilemma.png" alt="social_dilemma">
               </div>
             </div>
-            <div>This image shows the Inner Simulation in a proof-of-concept example of Social Environment Design. Here,
-              the agents find themselves amongst apple trees, and are able to harvest these apples. The reward function
-              of each agent depends on how many apples the individual agent has picked (intrinsic reward) and how many
-              apples the other agents have picked (extrinsic reward). At set intervals, the apples that have been
-              accumulated by each agent are taxed. These taxed apples are redistributed to all of the agents. The
-              Principal is able to reparameterize (draft new rules) the Inner Simulation by changing the tax tax rates.
+            <div>This image shows a scene from Harvest Game, an example that we used to demonstrate Social Environment
+              Design. This example is more complicated than our earlier Pac-Man example, and is closer to a real-world
+              environment.
             </div>
             <br />
             <div>
               <div class="container is-max-desktop content">
                 <div>
-                  Here, we present a motivating example for Social Environment Design, implemented for a small, simple
-                  simulation called Harvest Game. The aim in Harvest Game is to collect apples, with each apple yielding
-                  a reward. If all apples in an area are harvested, they never grow back. A dilemma arises when
-                  individual self-interest drives rapid harvesting, which could permanently deplete resources. Thus, the
-                  collective well-being of the population is dependent on individual agents sacrificing personal
-                  benefit. One potential solution to this dilemma is through the use of a central government (or a
-                  Principal!) that taxes and redistributes apples. In this example, players vote on whether they prefer
-                  a utilitarian society (valuing overall productivity) or an egalitarian society (valuing equality). As
-                  players interact within this evolving environment, the Principal faces the challenge of crafting
-                  tax-rates that balance immediate economic incentives with sustainability goals. In order to achieve
-                  this, the principal must foster cooperation among players, guiding them towards the type of society
-                  that the players have chosen. The initial results of this example were promising, but further analysis
-                  is warranted.
+                  The 7 players in Harvest Game are in a field, surrounded by groups of apples. Each player is able to
+                  harvest apples — but if all of the apples in a group are harvested, they never grow back! Remember
+                  that each player is looking to get the highest score. In this example, the score is a bit more
+                  complicated than Pac-Man and the ghosts. There are two factors that contribute to the score of a
+                  player. The first factor is the amount of apples that the player has harvested, and the second is how
+                  many apples the other players have harvested. These factors don’t necessarily have equal weight in
+                  deciding the score of a player — it depends on how selfish the player is. Different players have
+                  different levels of selfishness. Selfish players care more about how many apples they have, and
+                  unselfish players care more about how many apples the other players have.
+                  <br />
+                  In Harvest Game, a dilemma arises when selfishness drives rapid harvesting, which could permanently
+                  deplete resources (remember, when all of the apples in an area are harvested, they never grow back).
+                  So, the collective well-being of the population is dependent on individual players sacrificing
+                  short-term personal benefit. One potential solution to this dilemma is through the use of a central
+                  government (or a Principal!) that taxes and redistributes apples. In Harvest Game, players vote on
+                  whether they prefer a utilitarian society (valuing overall productivity) or an egalitarian society
+                  (valuing equality). As players interact within this evolving environment, the Principal faces the
+                  challenge of crafting tax-rates that balance immediate economic incentives with sustainability goals.
+                  In order to achieve this, the Principal must foster cooperation among players, guiding them towards
+                  the type of society that the players have chosen. The initial results of Harvest Game using the
+                  Principal were promising, but further analysis is warranted.
                 </div>
               </div>
             </div>
@@ -650,7 +679,7 @@
                   we believe that further work will yield results that are impactful in the real world. However, we
                   understand that our framework is abstract, and so it may be difficult to see its future potential for
                   application; our motivating example, while useful as a proof of concept, is clearly distant from
-                  real-world economic systems. While we recognize the distance, we posit that both a game where agents
+                  real-world economic systems. While we recognize the distance, we posit that both a game where players
                   harvest apples lies on the same fundamental axis as the New York Stock Exchange. In fact, we outline
                   two clear axes that separate our example from societally impactful instantiations of SED in the
                   future.
@@ -659,31 +688,33 @@
                   <ul>
                     <li>
                       The first and more immediately apparent axis is the complexity of the simulation (or real world
-                      environment). As an example, one of the simplest instances of the simulation would be two
-                      independent agents harvesting apples, each having a reward function that is maximized solely by
-                      increasing their own apples. In this situation, the best rules drafted by the Principal might
-                      discourage overharvesting of the apples so that both agents are able to have more apples in the
-                      long term. A more complex instance, like our earlier motivating example, contains more agents,
-                      with reward functions based on social interactions, communal welfare, and varying levels of
-                      selfishness. Already, this is closer to the real world. As complexity scales, simulations may
-                      approximate economics in self-contained villages, then towns, cities, states, and so on.
-                    </li>
+                      environment). As an example, a simpler instance of Harvest Game would be two selfish players
+                      harvesting apples, each having a score that is maximized solely by increasing their own apples. In
+                      this situation, the best rules drafted by the Principal might discourage overharvesting of the
+                      apples so that both players are able to have more apples in the long term. A more complex
+                      instance,
+                      like the Harvest Game that we explained, contains more players, with scores decided by individual
+                      wealth (apples), communal welfare, and varying levels of selfishness. Already, this is closer to
+                      the real world. As complexity scales, simulations may approximate economics in self-contained
+                      villages, then towns, cities, states, and so on. </li>
                     <li>
                       The second axis represents the control that the Principal has on the simulation. In this case,
                       potential control is directly proportional to ability. In the last ten years, artificial
-                      intelligence has advanced exponentially. However, there is still much, much progress to be made
-                      throughout the field broadly. We are still far from the technology that would enable artificial
-                      intelligence to play the role of Principal for even a small town. As we continue along this path
-                      of advancement, however, the potential Principals will be able to effectively participate in more
-                      real-world environments. </br>
-                      While our motivating example is fairly complex, an advanced Principal with a knowledge of game
-                      theory and high-level math would be able to fully ‘solve the game’ by parameterizing the
-                      simulation with the mathematically optimal tax rate. In a situation with an ever-changing
-                      ‘solution’, an advanced Principal may have the ability to output adaptive code designed to produce
-                      parameterizations. This relationship between control and ability applies to inputs as well as
-                      outputs — a more sophisticated Principal would be able to process more sophisticated information
-                      from the agents within the simulation. Thus, as the ability of the Principal increases, the
-                      effectiveness of the voting mechanism increases as well.
+                      intelligence has advanced exponentially (ChatGPT, as you know it today, was almost unthinkable a
+                      decade ago!). However, there is still much, much progress to be made throughout the field broadly.
+                      We are still far from the technology that would enable artificial intelligence to play the role of
+                      Principal for even a small town. As we continue along this path of advancement, however, the
+                      potential Principals will be able to effectively participate in more complex real-world
+                      environments.
+                      </br>
+                      While our Harvest Game example is fairly complex, an advanced Principal with a knowledge of game
+                      theory and high-level math would be able to fully ‘solve the game’ by coming up with the
+                      mathematically optimal tax rate. In a situation with an ever-changing ‘solution’, an advanced
+                      Principal may have the ability to output adaptive code designed to produce new rules. This
+                      relationship between control and ability applies to inputs as well as outputs — a more
+                      sophisticated Principal would be able to process more sophisticated information from the players.
+                      So, as the ability of the Principal increases, it is able to make better rules for more complex
+                      scenarios, and also consider more information from the players.
                     </li>
                   </ul>
                 </div>
