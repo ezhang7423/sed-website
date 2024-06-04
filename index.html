@@ -113,6 +113,17 @@
                     <span>Code</span>
                   </a>
                 </span>
+
+                <span class="link-block">
+                  <a target="_blank" href="https://thefounding.ai"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="./static/images/logo.avif" alt="Your Website Logo" style="height: 20px; width: auto;">
+                    </span>
+                    <span>The Founding</span>
+                  </a>
+                </span>
+
               </div>
 
             </div>
@@ -139,14 +150,17 @@
     </div>
   </section>
 
-  <div class="has-text-centered">
+  <div class="rounded-box"
+    style="border: 3px solid #656565; border-radius: 16px; padding: 10px; text-align: center; margin: 20px; width: 60%; background-color: #d2d2d2; margin-left: auto; margin-right: auto;">
     <p>Inexperienced with computer science or artificial intelligence? No worries! Hit the 'Beginner Friendly
       Explanation' :)</p>
+    <div class="content-toggle-buttons">
+      <button id="btnDetailed" onclick="showDetailed()" class="active" style="margin-right: 10px;">Detailed
+        Explanation</button>
+      <button id="btnBeginner" onclick="showBeginner()">Beginner Friendly Explanation</button>
+    </div>
   </div>
-  <div class="content-toggle-buttons">
-    <button id="btnDetailed" onclick="showDetailed()" class="active">Detailed Explanation</button>
-    <button id="btnBeginner" onclick="showBeginner()">Beginner Friendly Explanation</button>
-  </div>
+
 
   <div id="complex" style="display: block;">
     <section class="section">
@@ -837,7 +851,26 @@
   <!--/ Animation. -->
 
 
+  <section class="section" id="Related">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Related Work</h2>
+      <div>
+        Social Environment Design would not be possible without some exceptional prior work.
+        <br /> <br />
 
+        Firstly, <a href="https://arxiv.org/abs/2211.13746">Melting Pot</a> allowed us to build our motivating example,
+        inspired by <a href="https://arxiv.org/abs/1707.06600"> Harvest Game</a>.
+        <br /> <br />
+
+        Also, the <a href="https://mason.gmu.edu/~rhanson/futarchy2013.pdf">political and philosophical work</a> of
+        Robin Hanson, which helped to inform our approach to alignment.
+        <br /> <br />
+
+        The full list of related work can be found in
+        <a href="https://arxiv.org/pdf/2402.14090">our paper</a>.
+      </div>
+    </div>
+  </section>
 
 
   <section class="section" id="BibTeX">
