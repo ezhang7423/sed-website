@@ -30,32 +30,61 @@ function toggleSection(sectionId) {
     icon.textContent = '-';
   }
 }
+
 function showDetailed() {
   var simpleContent = document.getElementById('simple');
   var complexContent = document.getElementById('complex');
+  var TLDRContent= document.getElementById('TLDR');
+
   var btnDetailed = document.getElementById('btnDetailed');
   var btnBeginner = document.getElementById('btnBeginner');
+  var btnTLDR = document.getElementById('btnTLDR');
   
   simpleContent.style.display = 'none';
   complexContent.style.display = 'block';
-  
+  TLDRContent.style.display = 'none';
+
   btnDetailed.classList.add('active');
   btnBeginner.classList.remove('active');
+  btnTLDR.classList.remove('active');
 }
 
 function showBeginner() {
   var simpleContent = document.getElementById('simple');
   var complexContent = document.getElementById('complex');
+  var TLDRContent= document.getElementById('TLDR');
+
   var btnDetailed = document.getElementById('btnDetailed');
   var btnBeginner = document.getElementById('btnBeginner');
+  var btnTLDR = document.getElementById('btnTLDR');
+
   
   simpleContent.style.display = 'block';
   complexContent.style.display = 'none';
-  
+  TLDRContent.style.display = 'none';
+
   btnBeginner.classList.add('active');
   btnDetailed.classList.remove('active');
+  btnTLDR.classList.remove('active');
 }
+function showTLDR() {
+  var simpleContent = document.getElementById('simple');
+  var complexContent = document.getElementById('complex');
+  var TLDRContent= document.getElementById('TLDR');
 
+  var btnDetailed = document.getElementById('btnDetailed');
+  var btnBeginner = document.getElementById('btnBeginner');
+  var btnTLDR = document.getElementById('btnTLDR');
+
+  
+  simpleContent.style.display = 'none';
+  complexContent.style.display = 'none';
+  TLDRContent.style.display = 'block';
+  
+  btnBeginner.classList.remove('active');
+  btnDetailed.classList.remove('active');
+  btnTLDR.classList.add('active');
+}
 
 
 
