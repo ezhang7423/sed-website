@@ -47,6 +47,8 @@ function showDetailed() {
   btnDetailed.classList.add('active');
   btnBeginner.classList.remove('active');
   btnTLDR.classList.remove('active');
+  window.scrollTo(0, 500);
+
 }
 
 function showBeginner() {
@@ -66,6 +68,8 @@ function showBeginner() {
   btnBeginner.classList.add('active');
   btnDetailed.classList.remove('active');
   btnTLDR.classList.remove('active');
+  window.scrollTo(0, 500);
+
 }
 function showTLDR() {
   var simpleContent = document.getElementById('simple');
