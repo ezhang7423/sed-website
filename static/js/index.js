@@ -88,6 +88,8 @@ function showTLDR() {
   btnBeginner.classList.remove('active');
   btnDetailed.classList.remove('active');
   btnTLDR.classList.add('active');
+  window.scrollTo(0, 500);
+
 }
 
 
