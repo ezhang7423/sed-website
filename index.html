@@ -155,9 +155,10 @@
     <p>Inexperienced with computer science or artificial intelligence? No worries! Hit the 'Beginner Friendly
       Explanation' :)</p>
     <div class="content-toggle-buttons">
+
+      <button id="btnBeginner" onclick="showBeginner()">Beginner Friendly Explanation</button>
       <button id="btnDetailed" onclick="showDetailed()" class="active" style="margin-right: 10px;">Detailed
         Explanation</button>
-      <button id="btnBeginner" onclick="showBeginner()">Beginner Friendly Explanation</button>
     </div>
   </div>
 
@@ -527,7 +528,7 @@
                   looking at X-Rays to find tumors</a>), and much more. Our research focuses on a different
                 implementation, concerning how AI could be applied in government and economics. Specifically, we are
                 proposing a framework in which AI would make more informed and unbiased decisions in government roles.
-                We call this framework <strong>Social Environment Design</strong>.
+                We call this framework <strong>Social Environment Design</strong>, or SED for short.
               </p>
             </div>
           </div>
@@ -562,12 +563,12 @@
               </div>
             </div>
             <div>Figure 1: The proposed framework. In the <strong>Inner Simulation</strong>, there are several players
-              in an environment.
+              in an <strong>environment</strong>>.
               You can imagine each player as a simulated person, and the environment to be some video game. Each player
               wants to do as well as possible in the game by maximizing their score. After the Inner Simulation has run
               for some time, the players vote, giving their preferences on the rules of the game. The Principal takes
               all of these votes, and makes new rules for the game. With the new rules for the game, the Inner
-              Simulation runs until it becomes time to vote again. Then, the process continues. </div>
+              Simulation runs until it becomes time to vote again. Then, the process continues.</div>
             <br />
             <div class="container is-max-desktop content">
               <div class="columns is-centered has-text-centered">
@@ -579,7 +580,7 @@
                 the ghosts. Remember that the goal of each player is to get a higher score: Pac-Man gets a higher score
                 by eating more pellets, and the ghosts get higher scores by catching Pac-Man. Pac-Man and the ghosts
                 play in the Inner Simulation for a while, until it becomes time to vote. At that point, they all report
-                their preferences about the inner simulation — Pac-Man’s preference might be for more pellets, and
+                their preferences about the Inner Simulation — Pac-Man’s preference might be for more pellets, and
                 ghosts might report their preference to be able to move faster. All of these votes are considered by the
                 Principal — in this example, we can think of the Principal as the person who coded the Pac-Man game. The
                 Principal looks at all of the votes and changes the rules of the Pac-Man game. Then, the new Inner
@@ -590,7 +591,7 @@
                 population of the town would not have guaranteed influence on the actions of the mayor, and instead have
                 to trust that the mayor had their best interests at heart. In this scenario, Social Environment Design
                 would guarantee that the population had a direct say in the usage of their tax dollars, and know that
-                their votes had direct influence in the governance of the town. Beyond eliminated the need for blind
+                their votes had direct influence in the governance of the town. Beyond eliminating the need for blind
                 trust, the Principal has the advantage of being able to consider much more information, and thus be more
                 contextualized, than any human.
                 <br />
@@ -611,18 +612,18 @@
                   complex economics. </li>
               </ol>
               <div>
-                We argue that Social Environment Design does satisfy these requirements! <strong>Point 1: </strong>In
+                We argue that Social Environment Design does satisfy these requirements! <strong>Point 1:</strong> In
                 our framework,
-                illustrated in the figure above, we suggest addressing the concern of a misaligned decision-maker by
-                using an Principal who seeks to achieve goals that directly stem from votes. The Principal can’t be
-                corrupted by money or re-election, unlike many human decision-makers. <strong>Points 2 and 3:</strong>
-                Using some fancy
-                math called Game Theory, we are able to create a complex environment, but still remain ‘fuel-efficient’
-                by hiding most of that environment from each player (just like you! Most of the world is hidden from you
-                right now; you can’t see Antarctica from where you are). <strong>Point 4:</strong> By structuring our
-                framework as
-                repeated loops of the same process, we can reduce the larger economic problem into many smaller
-                problems, which will enable us to develop better theoretical understanding of complex economics.
+                illustrated in the figure above, we suggest addressing the concern of alignment by using an Principal
+                who seeks to achieve goals that directly stem from votes. The Principal can’t be corrupted by money or
+                re-election, unlike many human decision-makers. <strong>Points 2 and 3:</strong> Using some fancy math
+                called Game Theory,
+                we are able to create a complex environment, but still remain ‘fuel-efficient’ by hiding most of that
+                environment from each player (just like you! Most of the world is hidden from you right now; you can’t
+                see Antarctica from where you are). <strong>Point 4:</strong> By structuring our framework as repeated
+                loops of the same
+                process, we can reduce the larger economic problem into many smaller problems, which will enable us to
+                develop better theoretical understanding of complex economics.
               </div>
             </div>
           </div>
@@ -662,9 +663,9 @@
                   different levels of selfishness. Selfish players care more about how many apples they have, and
                   unselfish players care more about how many apples the other players have.
                   <br />
-                  In Harvest Game, a dilemma arises when selfishness drives rapid harvesting, which could permanently
+                  In Harvest Game dilemma arises when selfishness drives rapid harvesting, which could permanently
                   deplete resources (remember, when all of the apples in an area are harvested, they never grow back).
-                  So, the collective well-being of the population is dependent on individual players sacrificing
+                  So, the collective well-being of the population is dependent on individual player sacrificing
                   short-term personal benefit. One potential solution to this dilemma is through the use of a central
                   government (or a Principal!) that taxes and redistributes apples. In Harvest Game, players vote on
                   whether they prefer a utilitarian society (valuing overall productivity) or an egalitarian society
@@ -692,13 +693,12 @@
                 <div> Our work proposes a generalized framework that has the potential to improve decision-making, and
                   we believe that further work will yield results that are impactful in the real world. However, we
                   understand that our framework is abstract, and so it may be difficult to see its future potential for
-                  application; our motivating example, while useful as a proof of concept, is clearly distant from
-                  real-world economic systems. While we recognize the distance, we posit that both a game where players
-                  harvest apples lies on the same fundamental axis as the New York Stock Exchange. In fact, we outline
-                  two clear axes that separate our example from societally impactful instantiations of SED in the
-                  future.
+                  application; our Harvest Game example, while useful to demonstrate SED, is still clearly distant from
+                  real-world economic systems. While we recognize the distance, we argue that Harvest Game lies on the
+                  same fundamental axis as the New York Stock Exchange. In fact, we outline two clear axes that separate
+                  our example from societally impactful uses of SED in the future.
                   <br><br>
-                  Our axes: <strong>Simulation Complexity</strong> and <strong>Principal Control</strong>
+                  Our axes: <strong>Simulation Complexity</strong> and <strong>Principal Ability</strong>
                   <ul>
                     <li>
                       The first and more immediately apparent axis is the complexity of the simulation (or real world
@@ -712,23 +712,24 @@
                       the real world. As complexity scales, simulations may approximate economics in self-contained
                       villages, then towns, cities, states, and so on. </li>
                     <li>
-                      The second axis represents the control that the Principal has on the simulation. In this case,
-                      potential control is directly proportional to ability. In the last ten years, artificial
-                      intelligence has advanced exponentially (ChatGPT, as you know it today, was almost unthinkable a
-                      decade ago!). However, there is still much, much progress to be made throughout the field broadly.
-                      We are still far from the technology that would enable artificial intelligence to play the role of
-                      Principal for even a small town. As we continue along this path of advancement, however, the
-                      potential Principals will be able to effectively participate in more complex real-world
+                      The second axis represents the ability of the Principal to preside over complex environments. In
+                      the last ten years, artificial intelligence has advanced exponentially (ChatGPT, as you know it
+                      today, was almost unthinkable a decade ago!). However, there is still significant progress to be
+                      made. We are still far from the technology that would enable artificial intelligence to play the
+                      role of Principal for even a small town. As we continue along this path of advancement, however,
+                      the potential Principals will be able to effectively participate in more complex real-world
                       environments.
                       </br>
                       While our Harvest Game example is fairly complex, an advanced Principal with a knowledge of game
                       theory and high-level math would be able to fully ‘solve the game’ by coming up with the
-                      mathematically optimal tax rate. In a situation with an ever-changing ‘solution’, an advanced
-                      Principal may have the ability to output adaptive code designed to produce new rules. This
-                      relationship between control and ability applies to inputs as well as outputs — a more
-                      sophisticated Principal would be able to process more sophisticated information from the players.
-                      So, as the ability of the Principal increases, it is able to make better rules for more complex
-                      scenarios, and also consider more information from the players.
+                      mathematically optimal tax rate. As environments increase in complexity and become more dynamic,
+                      there might not be an optimal ‘solution’ that stays the same. A more advanced Principal may have
+                      the ability to create adaptive code that can handle these dynamic situations and still produce .
+                      This relationship between control and ability applies to inputs as well as outputs — a more
+                      sophisticated Principal would be able to process more sophisticated information from the players
+                      in the form of voting. This means that decisions from the Prinicpal will be better contextualized
+                      and informed. So, as the ability of the Principal increases, it is able to make better rules for
+                      more complex scenarios.
                     </li>
                   </ul>
                 </div>
@@ -751,9 +752,9 @@
                     Clearly, we have steps to take in two directions — simulating real-world complexity, and designing
                     an incredibly advanced Principal. Really, we have a marathon to run in two directions — this
                     distance represents a colossal gap between the technology that we have and the technology that we
-                    need. Though this gap is colossal, Rome wasn’t built in a day. We foresee many implementations of
-                    SED, each better than the last. Here, we present a simplified outline what some of those
-                    implementations may look like.
+                    need. Though this gap is large, Rome wasn’t built in a day. We foresee many implementations of SED,
+                    each better than the last. Here, we present a simplified outline what some of those implementations
+                    may look like.
                     <div class="columns is-centered has-text-centered">
                       <div class="column is-full-width">
                         <img style="width: 500px" src="./static/images/graph.png" alt="graph">
@@ -762,17 +763,13 @@
                     <ul>
                       <li>
                         <strong>SED v1</strong>: Here, we may see a small population in an already-governed community,
-                        such as a neighborhood or a mobile home park, that are
-                        looking to improve the place that they live. In this hypothetical, each member of the population
-                        donates some small sum of money, along
-                        with the changes they wish to see — perhaps a new park, or an after-school organization that
-                        looks
-                        after children before their parents
-                        get home from work. The Principal will take into account their desires, allocate the money as it
-                        sees fit, and gauge the satisfaction of
-                        the population. The Principal will continue to optimize for the satisfaction of the population
-                        over repeated monetary allocations, leading
-                        to a happier population.
+                        such as a neighborhood or a mobile home park, that are looking to improve the place that they
+                        live. In this hypothetical, each member of the population donates some small sum of money, and
+                        provide with the changes they wish to see — perhaps a new park, or an after-school organization
+                        that looks after children before their parents get home from work. The Principal will take into
+                        account their desires, allocate the money as it sees fit, and gauge the satisfaction of the
+                        population. The Principal will continue to optimize for the satisfaction of the population over
+                        repeated monetary allocations, leading to a happier population.
                       </li>
                       <div class="columns is-centered has-text-centered">
                         <div class="column is-full-width">
