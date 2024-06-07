@@ -118,7 +118,7 @@
                   <a target="_blank" href="https://thefounding.ai"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <img src="./static/images/logo.avif" alt="Your Website Logo" style="height: 20px; width: auto;">
+                      <img src="./static/images/logo.avif" alt="logo" style="height: 20px; width: auto;">
                     </span>
                     <span>The Founding</span>
                   </a>
@@ -151,19 +151,22 @@
   </section>
 
   <div class="rounded-box"
-    style="border: 3px solid #656565; border-radius: 16px; padding: 10px; text-align: center; margin: 20px; width: 60%; background-color: #d2d2d2; margin-left: auto; margin-right: auto;">
-    <p>Inexperienced with computer science or artificial intelligence? No worries! Hit the 'Beginner Friendly
-      Explanation' :)</p>
+    style="border-radius: 16px; padding: 10px; text-align: center; margin: 20px; width: 60%;; margin-left: auto; margin-right: auto;">
     <div class="content-toggle-buttons">
-      <button id="btnTLDR" onclick="showTLDR()">Brief Summary</button>
-      <button id="btnBeginner" onclick="showBeginner()">Beginner Friendly Explanation</button>
-      <button id="btnDetailed" onclick="showDetailed()" class="active" style="margin-right: 10px;">Detailed
-        Explanation</button>
+      <a id="btnTLDR" class="external-link button is-normal is-rounded active" onclick="showTLDR()">
+        <span>Brief Summary</span>
+      </a>
+      <a id="btnBeginner" class="external-link button is-normal is-rounded" onclick="showBeginner()">
+        <span>Beginner-Friendly Explanation</span>
+      </a>
+      <a id="btnDetailed" class="external-link button is-normal is-rounded" onclick="showDetailed()">
+        <span>Detailed Explanation</span>
+      </a>
     </div>
   </div>
 
 
-  <div id="complex" style="display: block;">
+  <div id="complex" style="display: none;">
     <section class="section">
       <div class="container is-max-desktop">
         <!-- Abstract. -->
@@ -185,6 +188,10 @@
                 key open problems for future research in AI-based policymaking. By solving these challenges, we hope to
                 achieve
                 various social welfare objectives, thereby promoting more ethical and responsible decision making.
+                <br /><br />
+                Please note that the final two sections in the Beginner-Friendly and Detailed Explanations are
+                identical.
+
 
               </p>
             </div>
@@ -407,20 +414,19 @@
                     incredibly advanced Principal. Really,
                     we have a marathon to run in two directions — this distance represents a colossal gap between the
                     technology that we have and the technology
-                    that we need. Though this gap is colossal, the Colosseum stands tall two thousand years after its
-                    construction, and we’ve heard that it wasn’t
-                    built in a day. We foresee many implementations of SED, each better than the last. Here, we present
+                    that we need. Though this gap is large, Rome wasn’t built in a day. We foresee many implementations
+                    of SED, each better than the last. Here, we present
                     a
                     simplified outline what some of those
                     implementations may look like.
-                    <div class="columns is-centered has-text-centered">
-                      <div class="column is-full-width">
-                        <img style="width: 500px" src="./static/images/graph.png" alt="graph">
+                    <div style="display: flex; align-items: center;">
+                      <div class="columns is-centered has-text-centered" style="flex-shrink: 0;padding: 20px;">
+                        <div class="column is-full-width">
+                          <img style="width: 500px" src="./static/images/sedv1.png" alt="sedv1">
+                        </div>
                       </div>
-                    </div>
-                    <ul>
-                      <li>
-                        <strong>SED v1</strong>: Here, we may see a small population in an already-governed community,
+                      <div><strong>SED v1</strong>: Here, we may see a small population in an already-governed
+                        community,
                         such as a neighborhood or a mobile home park, that are
                         looking to improve the place that they live. In this hypothetical, each member of the population
                         donates some small sum of money, along
@@ -431,15 +437,13 @@
                         sees fit, and gauge the satisfaction of
                         the population. The Principal will continue to optimize for the satisfaction of the population
                         over repeated monetary allocations, leading
-                        to a happier population.
-                      </li>
-                      <div class="columns is-centered has-text-centered">
-                        <div class="column is-full-width">
-                          <img style="width: 500px" src="./static/images/sedv1.png" alt="sedv1">
-                        </div>
-                      </div>
-                      <li>
-                        <strong>SED v2</strong>: In this case, we see a larger and more complex population, and a
+                        to a happier population. </div>
+
+                    </div>
+
+                    <div style="display: flex; align-items: center;">
+
+                      <div> <strong>SED v2</strong>: In this case, we see a larger and more complex population, and a
                         Principal tasked with more than just monetary
                         allocation. This may take the form of a larger town or city, in which the Principal deals with
                         both monetary allocation, via taxes rather
@@ -447,14 +451,21 @@
                         tax
                         system itself, the operation of public
                         transport and infrastructure, and more — the Principal would have responsibilities akin to the
-                        legislature of such a population.
-                      </li>
-                      <div class="columns is-centered has-text-centered">
+                        legislature of such a population. </div>
+                      <div class="columns is-centered has-text-centered" style="flex-shrink: 0; padding: 20px;">
                         <div class="column is-full-width">
                           <img style="width: 500px" src="./static/images/sedv2.png" alt="sedv2">
                         </div>
                       </div>
-                      <li>
+                    </div>
+
+                    <div style="display: flex; align-items: center;">
+                      <div class="columns is-centered has-text-centered" style="flex-shrink: 0;padding: 20px;">
+                        <div class="column is-full-width">
+                          <img style="width: 500px" src="./static/images/sedv3.png" alt="sedv3">
+                        </div>
+                      </div>
+                      <div>
                         <strong>SED v3</strong>: As the population and ability of the Principal increases, the possible
                         instantiations for SED grow as well.
                         An advancement from SED v2 may be the utilization of SED within a state in the United States, or
@@ -462,44 +473,16 @@
                         this would be dependent on the success of SED v2, as well as the state of pertinent technology
                         needed for a v3 Principal. This prerequisite
                         applies to each advancement — SED v2 would happen only after the conclusive success of SED v1.
-                      </li>
-                      <div class="columns is-centered has-text-centered">
-                        <div class="column is-full-width">
-                          <img style="width: 500px" src="./static/images/sedv3.png" alt="sedv3">
-                        </div>
                       </div>
-                    </ul>
+
+
+                    </div>
+
                   </div>
                 </div>
               </div>
               <!-- /What Are The Steps To Get There??-->
 
-              <!-- /How Do We Take The Steps?-->
-              <div class="container is-max-desktop content">
-                <h2 class="title is-3">
-                  <div class="toggle-button" onclick="toggleSection('how')"
-                    style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                    <span>How Do We Take The Steps?</span>
-                    <span class="toggle-icon">+</span>
-                  </div>
-                </h2>
-                <div id="how" class="collapse-content">
-                  <div> We are under no illusion that this will be easy — each of these steps represents a large
-                    technological and ideological jump. Furthermore,
-                    we are acutely aware that SED will affect people beyond researchers and academics. Thus, every
-                    person
-                    reading this, regardless of skillsets or
-                    familiarity with artificial intelligence, deserves a chance to contribute to this cause. With this
-                    in
-                    mind, we propose a framework, paralleling SED,
-                    that will allow for the contribution of anybody and everybody who believes in Social Environment
-                    Design.</div>
-                  <br />
-                  <a
-                    href="https://founding-zero.notion.site/SED-Contributor-Framework-6191895314c24cae8cc56acdc6dbe265?pvs=4">Contributor
-                    Framework</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -529,6 +512,10 @@
                 implementation, concerning how AI could be applied in government and economics. Specifically, we are
                 proposing a framework in which AI would make more informed and unbiased decisions in government roles.
                 We call this framework <strong>Social Environment Design</strong>, or SED for short.
+                <br /><br />
+                Please note that the final two sections in the Beginner-Friendly and Detailed Explanations are
+                identical.
+
               </p>
             </div>
           </div>
@@ -557,23 +544,24 @@
             position to make better informed, unbiased policy decisions.</div>
           <br />
           <div class="container is-max-desktop content">
-            <div class="columns is-centered has-text-centered">
-              <div class="column is-full-width">
-                <img style="width: 800px" src="./static/images/framework_simple.png" alt="framework_simple">
+            <div style="display: flex; align-items: center;">
+              <div class="columns is-centered has-text-centered" style="flex-shrink: 0;">
+                <div class="column is-full-width" style="flex-shrink: 0;">
+                  <img style="width: 400px; flex-shrink: 0;" src="./static/images/framework_simple.png"
+                    alt="framework_simple">
+                </div>
               </div>
-            </div>
-            <div>Figure 1: The proposed framework. In the <strong>Inner Simulation</strong>, there are several players
-              in an <strong>environment</strong>.
-              You can imagine each player as a simulated person, and the environment to be some video game. Each player
-              wants to do as well as possible in the game by maximizing their score. After the Inner Simulation has run
-              for some time, the players vote, giving their preferences on the rules of the game. The Principal takes
-              all of these votes, and makes new rules for the game. With the new rules for the game, the Inner
-              Simulation runs until it becomes time to vote again. Then, the process continues.</div>
-            <br />
-            <div class="container is-max-desktop content">
-              <div class="columns is-centered has-text-centered">
-              </div>
-              <div>
+              <div style="padding-left: 20px;">
+                Figure 1: The proposed framework. In the <strong>Inner Simulation</strong>, there are several players
+                in an <strong>environment</strong>.
+                You can imagine each player as a simulated person, and the environment to be some video game. Each
+                player
+                wants to do as well as possible in the game by maximizing their score. After the Inner Simulation has
+                run
+                for some time, the players vote, giving their preferences on the rules of the game. The Principal takes
+                all of these votes, and makes new rules for the game. With the new rules for the game, the Inner
+                Simulation runs until it becomes time to vote again. Then, the process continues.
+                <br /> <br />
                 As an example, let’s picture the Inner Simulation as the game Pac-Man, where Pac-Man and all of the
                 ghosts are the players, and the environment is the maze and all of the pellets. It’s important to note
                 that no actual people are controlling any of the players — Pac-Man moves around on his own, just like
@@ -595,6 +583,16 @@
                 trust, the Principal has the advantage of being able to consider much more information, and thus be more
                 contextualized, than any human.
                 <br />
+
+
+              </div>
+            </div>
+            <br />
+            <div class="container is-max-desktop content">
+              <div class="columns is-centered has-text-centered">
+              </div>
+              <div>
+
                 When designing this framework, we wanted to try to satisfy several requirements.
               </div>
               <ol>
@@ -755,29 +753,31 @@
                     need. Though this gap is large, Rome wasn’t built in a day. We foresee many implementations of SED,
                     each better than the last. Here, we present a simplified outline what some of those implementations
                     may look like.
-                    <div class="columns is-centered has-text-centered">
-                      <div class="column is-full-width">
-                        <img style="width: 500px" src="./static/images/graph.png" alt="graph">
-                      </div>
-                    </div>
-                    <ul>
-                      <li>
-                        <strong>SED v1</strong>: Here, we may see a small population in an already-governed community,
-                        such as a neighborhood or a mobile home park, that are looking to improve the place that they
-                        live. In this hypothetical, each member of the population donates some small sum of money, and
-                        provide with the changes they wish to see — perhaps a new park, or an after-school organization
-                        that looks after children before their parents get home from work. The Principal will take into
-                        account their desires, allocate the money as it sees fit, and gauge the satisfaction of the
-                        population. The Principal will continue to optimize for the satisfaction of the population over
-                        repeated monetary allocations, leading to a happier population.
-                      </li>
-                      <div class="columns is-centered has-text-centered">
+                    <br />
+
+                    <div style="display: flex; align-items: center; padding: 20px;">
+                      <div class="columns is-centered has-text-centered" style="flex-shrink: 0;">
                         <div class="column is-full-width">
                           <img style="width: 500px" src="./static/images/sedv1.png" alt="sedv1">
                         </div>
                       </div>
-                      <li>
-                        <strong>SED v2</strong>: In this case, we see a larger and more complex population, and a
+                      <div style="padding-left: 20px;">
+                        <strong>SED v1</strong>: Here, we may see a small population in an already-governed community,
+                        such as a neighborhood or a mobile home park, that are looking to improve the place that they
+                        live. In this hypothetical, each member of the population donates some small sum of money, and
+                        provide with the changes they wish to see — perhaps a new park, or an after-school
+                        organization
+                        that looks after children before their parents get home from work. The Principal will take
+                        into
+                        account their desires, allocate the money as it sees fit, and gauge the satisfaction of the
+                        population. The Principal will continue to optimize for the satisfaction of the population
+                        over
+                        repeated monetary allocations, leading to a happier population.
+                      </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; padding: 20px;">
+                      <div><strong>SED v2</strong>: In this case, we see a larger and more complex population, and a
                         Principal tasked with more than just monetary
                         allocation. This may take the form of a larger town or city, in which the Principal deals with
                         both monetary allocation, via taxes rather
@@ -785,116 +785,66 @@
                         tax
                         system itself, the operation of public
                         transport and infrastructure, and more — the Principal would have responsibilities akin to the
-                        legislature of such a population.
-                      </li>
-                      <div class="columns is-centered has-text-centered">
+                        legislature of such a population. </div>
+                      <div class="columns is-centered has-text-centered" style="flex-shrink: 0; padding-left: 20px;">
                         <div class="column is-full-width">
                           <img style="width: 500px" src="./static/images/sedv2.png" alt="sedv2">
                         </div>
                       </div>
-                      <li>
-                        <strong>SED v3</strong>: As the population and ability of the Principal increases, the possible
+                    </div>
+
+                    <div style="display: flex; align-items: center; padding: 20px;">
+                      <div class="columns is-centered has-text-centered" style="flex-shrink: 0;">
+                        <div class="column is-full-width">
+                          <img style="width: 500px" src="./static/images/sedv3.png" alt="sedv3">
+                        </div>
+                      </div>
+                      <div style="padding-left: 20px;"><strong>SED v3</strong>: As the population and ability of the
+                        Principal increases, the possible
                         instantiations for SED grow as well.
                         An advancement from SED v2 may be the utilization of SED within a state in the United States, or
                         for a small small country. Of course,
                         this would be dependent on the success of SED v2, as well as the state of pertinent technology
                         needed for a v3 Principal. This prerequisite
                         applies to each advancement — SED v2 would happen only after the conclusive success of SED v1.
-                      </li>
-                      <div class="columns is-centered has-text-centered">
-                        <div class="column is-full-width">
-                          <img style="width: 500px" src="./static/images/sedv3.png" alt="sedv3">
-                        </div>
                       </div>
-                    </ul>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- /What Are The Steps To Get There??-->
 
-              <!-- /How Do We Take The Steps?-->
-              <div class="container is-max-desktop content">
-                <h2 class="title is-3">
-                  <div class="toggle-button" onclick="toggleSection('how-simple')"
-                    style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                    <span>How Do We Take The Steps?</span>
-                    <span class="toggle-icon">+</span>
-                  </div>
-                </h2>
-                <div id="how-simple" class="collapse-content">
-                  <div> We are under no illusion that this will be easy — each of these steps represents a large
-                    technological and ideological jump. Furthermore,
-                    we are acutely aware that SED will affect people beyond researchers and academics. Thus, every
-                    person
-                    reading this, regardless of skillsets or
-                    familiarity with artificial intelligence, deserves a chance to contribute to this cause. With this
-                    in
-                    mind, we propose a framework, paralleling SED,
-                    that will allow for the contribution of anybody and everybody who believes in Social Environment
-                    Design.</div>
-                  <br />
-                  <a
-                    href="https://founding-zero.notion.site/SED-Contributor-Framework-6191895314c24cae8cc56acdc6dbe265?pvs=4">Contributor
-                    Framework</a>
-                </div>
-              </div>
+            
             </div>
           </div>
         </div>
     </section>
   </div>
 
-  <div id="TLDR" style="display: none;">
+  <div id="TLDR" style="display: block;">
     <section class="section">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Brief Summary</h2>
-            <div class="content has-text-justified">
-              This website was created to outline <strong>Social Environment Design</strong> (SED), a framework that proposes the usage
-              of artificial intelligence (AI) for decision-making. As AI continues gaining relevance in our society
-              today, we see that AI outperforming humans at certain tasks, such as image recognition and playing video
-              games. We believe that our framework is a path towards AI outperforming humans, but in decision-making
-              rather than gaming or classifying images.
-              <br />
+            <div class="subtitle has-text-justified hero-teaser">
+              <ol>
+                <li> Human policy-makers have many issues, such as prioritizing lobbyist interests over the public [1
+                  (<a href="https://www.annualreviews.org/content/journals/10.1146/annurev-polisci-100711-135308">de
+                    Figueiredo</a>)] and corruption [2 (<a href="//www.transparency.org/en/cpi/2023">Corruptions
+                    Perceptions Index</a>)].</li>
 
-              Specifically, we mean to apply SED to the creation of economic policy. Creating economic policy is hard;
-              huge amounts of information factor into every individual decision, and when paired with the effects of
-              other policies, long-term predictions are incredibly complex. Furthermore, many human policymakers are
-              corrupt, serving some personal agenda (lobbyists, re-election, etc.) rather than the population that we
-              represent. With SED, we believe that the creation of economic policy will be less biased and more
-              contextualized.
-              <br />
-              <br />
-              <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                  <img style="width: 800px" src="./static/images/framework_simple.png" alt="framework_simple">
-                </div>
-              </div>
-              The proposed framework. The <strong>Inner Simulation</strong> is an environment populated by players. You
-              can think of
-              the environment as a town, and the players as the population of the town. After existing in the town for a
-              period of time, the people vote — not for a candidate, but instead reporting their preferences on how they
-              want the laws of the town to change. The <strong>Principal</strong> sees these votes, and changes the
-              rules of the town
-              accordingly. The people continue living in the town with the new laws until it becomes time to vote again.
-              Over time, the Principal becomes better and better at making the laws, and the population grows happier
-              and happier.
-              <br />
-              <br />
-              Our initial experiments with SED have been promising, and we believe that continued development will bring
-              about societal benefit as a result of SED being used in the real-world. However, we still have much
-              progress to make before a large-scale implementation of SED is possible (See the <a
-                href="javascript:showBeginner();">Beginner</a> or <a href="javascript:showDetailed();">Detailed</a>
-              section for more information on our experiments and the progress we need to make).
-
-              We know that the path forward is a difficult one, but we believe that our idea has the potential to truly
-              transform the world into a better place for every single person. Therefore, we want every person,
-              regardless of technological expertise, familiarity with economics, or understanding of politics, to be
-              able to help us achieve our goal. This desire has led us to create a <a
-                href="https://founding-zero.notion.site/SED-Contributor-Framework-6191895314c24cae8cc56acdc6dbe265?pvs=4">Contributor
-                Framework</a>, mirroring SED,
-              that will allow for contributions from anybody and everybody who also believes in our idea.
+                <li> AI, if made absolutely safe and extremely intelligent, could someday do much better. We call this
+                  safe
+                  AGI.</li>
+                <li> SED is a model for using safe AGI to enable better policy-making.
+                </li>
+                <li>It works by democratically gathering values [4 (<a
+                    href="https://mason.gmu.edu/~rhanson/futarchy2013.pdf">Robin Hanson</a>), 5 (<a
+                    href="https://www.nature.com/articles/s41562-022-01383-x">Human Centered Mechanism Design</a>)],
+                  creating automated policy [6 (<a href="https://www.science.org/doi/10.1126/sciadv.abk2607">The AI Economist</a>)], and finally
+                  simulating policy outcomes [7 (<a href="https://arxiv.org/abs/2304.03442">Interactive Simulacra of Human Behavior</a>), 8(<a href="https://arxiv.org/abs/2211.13746">Melting Pot 2.0</a>)].</li>
+              </ol>
             </div>
           </div>
         </div>
@@ -904,22 +854,40 @@
 
 
   <!--/ Animation. -->
-
+  <section class="section" id="Related">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Contributor Framework</h2>
+      <div>
+        We know that the path forward is a difficult one, but we believe that our idea has the potential to truly
+              transform the world into a better place for every single person. Therefore, we want every person,
+              regardless of technological expertise, familiarity with economics, or understanding of politics, to be
+              able to help us achieve our goal. This desire has led us to create a <a
+                href="https://founding-zero.notion.site/SED-Contributor-Framework-6191895314c24cae8cc56acdc6dbe265?pvs=4">Contributor
+                Framework</a>, mirroring SED,
+              that will allow for contributions from anybody and everybody who also believes in our idea.
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="Related">
     <div class="container is-max-desktop content">
       <h2 class="title">Related Work</h2>
       <div>
         Social Environment Design would not be possible without some exceptional prior work.
+        <br />
+
+
+        Firstly, <a href="https://www.nature.com/articles/s41562-022-01383-x">Human Centered Mechanism Design with
+          Democratic AI</a> inspired us to solve the problem of alignment through human feedback, designing policies via
+        RLHF. Furthermore, <a href="https://www.science.org/doi/10.1126/sciadv.abk2607">The AI Economist</a> provided
+        strong evidence of the ability of AI to outperform other approaches in complex economic policy design. Together,
+        these works build the foundation on which we propose Social Environment Design.
         <br /> <br />
 
-        Firstly, <a href="https://arxiv.org/abs/2211.13746">Melting Pot</a> allowed us to build our motivating example,
+        Lastly, we give thanks to <a href="https://arxiv.org/abs/2211.13746">Melting Pot</a>, which allowed us to build
+        our motivating example,
         inspired by <a href="https://arxiv.org/abs/1707.06600"> Harvest Game</a>.
-        <br /> <br />
-
-        Also, the <a href="https://mason.gmu.edu/~rhanson/futarchy2013.pdf">political and philosophical work</a> of
-        Robin Hanson, which helped to inform our approach to alignment.
-        <br /> <br />
+        <br />
 
         The full list of related work can be found in
         <a href="https://arxiv.org/pdf/2402.14090">our paper</a>.

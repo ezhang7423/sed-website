@@ -157,24 +157,27 @@ body {
   transition: max-height .5s ease-out;
   max-height: 0;
   margin-top: 30;
-  padding-top: 15;
+  padding-top: 40;
 }
-
+.expanded{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .collapse-content.expanded{
   max-height: 3000px;
   padding-top: 15;
   padding-bottom: 15;
   margin-top: 20;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 .toggle-button {
   background-color: #f9f9f9; 
   padding: 10px 20px;
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
   width: auto; 
   margin: 0 auto; 
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+  box-shadow: 0 0px 5px rgba(0,0,0,0.2); 
   transition: all 0.3s;
 }
 
@@ -194,21 +197,22 @@ body {
   margin-top: 20px;
 }
 
-.content-toggle-buttons button {
+.content-toggle-buttons a {
   padding: 10px 20px;
   margin: 10px;
   cursor: pointer;
-  background-color: #31649b;
+  background-color: #55ADEF;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; 
   font-size: 16px;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.content-toggle-buttons button:hover {
-  background-color: #0056b3;
+.content-toggle-buttons a:hover {
+  background-color: #3C88C2;
+  color: white;
 }
-.content-toggle-buttons button.active {
-  background-color: #072547;
+.content-toggle-buttons a.active {
+  background-color: #3C88C2;
 }
-

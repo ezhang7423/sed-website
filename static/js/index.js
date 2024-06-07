@@ -47,7 +47,9 @@ function showDetailed() {
   btnDetailed.classList.add('active');
   btnBeginner.classList.remove('active');
   btnTLDR.classList.remove('active');
-  window.scrollTo(0, 500);
+ 
+  scrollposition = btnTLDR.getBoundingClientRect();
+  window.scrollTo(0,scrollposition.y + window.scrollY - 30);
 
 }
 
@@ -68,7 +70,9 @@ function showBeginner() {
   btnBeginner.classList.add('active');
   btnDetailed.classList.remove('active');
   btnTLDR.classList.remove('active');
-  window.scrollTo(0, 500);
+
+  scrollposition = btnTLDR.getBoundingClientRect();
+  window.scrollTo(0,scrollposition.y + window.scrollY - 30);
 
 }
 function showTLDR() {
@@ -88,7 +92,9 @@ function showTLDR() {
   btnBeginner.classList.remove('active');
   btnDetailed.classList.remove('active');
   btnTLDR.classList.add('active');
-  window.scrollTo(0, 500);
+  
+  scrollposition = btnTLDR.getBoundingClientRect();
+  window.scrollTo(0,scrollposition.y + window.scrollY - 30);
 
 }
 
