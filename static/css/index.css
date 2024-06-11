@@ -164,7 +164,7 @@ body {
   padding-bottom: 20px;
 }
 .collapse-content.expanded{
-  max-height: 3000px;
+  max-height: 10000px;
   padding-top: 15;
   padding-bottom: 15;
   margin-top: 20;
@@ -195,6 +195,11 @@ html {
 .content-toggle-buttons {
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically */
+  flex-direction: row; /* Layout items in a row */
+  width: 100%; 
 }
 
 .content-toggle-buttons a {
@@ -215,4 +220,29 @@ html {
 }
 .content-toggle-buttons a.active {
   background-color: #3C88C2;
+}
+@media (max-width: 768px) {
+  .content-toggle-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+}
+.initimages{
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically */
+  flex-direction: row; /* Layout items in a row */
+  width: 100%; 
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .initimages {
+    display: none;
+  }
+}
+
+@media (max-width: 768px){
+  .simple_frame{
+    width: 200px;
+    padding:10px;
+  }
 }
