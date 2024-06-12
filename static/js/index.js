@@ -30,7 +30,6 @@ function toggleSection(sectionId) {
     icon.textContent = '-';
   }
 }
-
 function showDetailed() {
   var simpleContent = document.getElementById('simple');
   var complexContent = document.getElementById('complex');
@@ -51,6 +50,11 @@ function showDetailed() {
   scrollposition = btnTLDR.getBoundingClientRect();
   window.scrollTo(0,scrollposition.y + window.scrollY - 30);
 
+  var sections = complexContent.getElementsByClassName('expanded'); // Assuming 'expanded' class is used to mark expanded sections
+  Array.from(sections).forEach(function(section) {
+    var sectionId = section.id;
+    toggleSection(sectionId); // Call your toggle function if the section is expanded
+  });
 }
 
 function showBeginner() {
@@ -74,6 +78,11 @@ function showBeginner() {
   scrollposition = btnTLDR.getBoundingClientRect();
   window.scrollTo(0,scrollposition.y + window.scrollY - 30);
 
+  var sections = simpleContent.getElementsByClassName('expanded'); // Assuming 'expanded' class is used to mark expanded sections
+  Array.from(sections).forEach(function(section) {
+    var sectionId = section.id;
+    toggleSection(sectionId); // Call your toggle function if the section is expanded
+  });
 }
 function showTLDR() {
   var simpleContent = document.getElementById('simple');
@@ -96,6 +105,11 @@ function showTLDR() {
   scrollposition = btnTLDR.getBoundingClientRect();
   window.scrollTo(0,scrollposition.y + window.scrollY - 30);
 
+  var sections = TLDRContent.getElementsByClassName('expanded'); // Assuming 'expanded' class is used to mark expanded sections
+  Array.from(sections).forEach(function(section) {
+    var sectionId = section.id;
+    toggleSection(sectionId); // Call your toggle function if the section is expanded
+  });
 }
 
 

@@ -246,3 +246,33 @@ html {
     padding:10px;
   }
 }
+.intro-img{
+  display: flex;
+}
+@media (max-width: 768px){
+  .intro-img{
+    display: block;
+  }
+}
+
+.beginner-steps{
+  display: flex;
+}
+@media (max-width: 768px){
+  .beginner-steps{
+    display: block;
+  }
+}
+
+.sed2phone{
+  display: none;
+}
+@media (max-width: 768px){
+  .sed2phone{
+    display: block;
+  }
+  .sed2comp{
+    display: none;
+  }
+
+}
